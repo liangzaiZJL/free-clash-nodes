@@ -1,0 +1,13 @@
+# 生成的数据与临时文件不入库（CI 每次重新生成）
+__pycache__/
+subs/
+nodes/
+bin/
+mihomo/
+qa/
+*.log
+sources_raw.json
+subs_manifest.json
+extra_manifest.json
+
+# 保留 output/（每日更新的结果，提交回仓库）

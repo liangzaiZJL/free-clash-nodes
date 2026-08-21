@@ -1,0 +1,281 @@
+{
+  "total_dedup_nodes": 10299,
+  "tcp_ok": 3195,
+  "protocol_alive": 70,
+  "verified_alive": 66,
+  "speed_ok": 56,
+  "top_by_speed": [
+    {
+      "name": "hysteria2-755770771",
+      "type": "hysteria2",
+      "server": "45.32.252.144",
+      "port": 443,
+      "delay_ms": 407,
+      "speed_mbps": 0.76,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "hysteria2-468883194",
+      "type": "hysteria2",
+      "server": "66.94.121.46",
+      "port": 443,
+      "delay_ms": 510,
+      "speed_mbps": 0.36,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "hysteria2-738907388",
+      "type": "hysteria2",
+      "server": "player.wwwinternetvideo.click",
+      "port": 443,
+      "delay_ms": 388,
+      "speed_mbps": 0.24,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "hysteria2-299162412",
+      "type": "hysteria2",
+      "server": "starlink-ft.251313.xyz",
+      "port": 443,
+      "delay_ms": 407,
+      "speed_mbps": 0.14,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "\\U0001F534\\U0001F1E8\\U0001F1F3[\\U0001F39E️\\U0001F4E6]_github.com/Ruk1ng001_29791db6",
+      "type": "vless",
+      "server": "120.227.1.43",
+      "port": 12528,
+      "delay_ms": 282,
+      "speed_mbps": 0.01,
+      "sub": "Ruk1ng001-clash.yaml"
+    },
+    {
+      "name": "hysteria2-647019506",
+      "type": "hysteria2",
+      "server": "fast.wwwinternetvideo.click",
+      "port": 443,
+      "delay_ms": 305,
+      "speed_mbps": 0.01,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "shadowsocks-768399391",
+      "type": "ss",
+      "server": "211.91.158.44",
+      "port": 21110,
+      "delay_ms": 406,
+      "speed_mbps": 0.01,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "shadowsocks-768399395",
+      "type": "ss",
+      "server": "211.91.158.26",
+      "port": 21103,
+      "delay_ms": 497,
+      "speed_mbps": 0.01,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "shadowsocks-768399485",
+      "type": "ss",
+      "server": "211.91.158.26",
+      "port": 21121,
+      "delay_ms": 509,
+      "speed_mbps": 0.01,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "shadowsocks-768399425",
+      "type": "ss",
+      "server": "211.91.158.26",
+      "port": 21119,
+      "delay_ms": 509,
+      "speed_mbps": 0.01,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "shadowsocks-768399465",
+      "type": "ss",
+      "server": "211.91.158.26",
+      "port": 21109,
+      "delay_ms": 510,
+      "speed_mbps": 0.01,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "shadowsocks-768399492",
+      "type": "ss",
+      "server": "211.91.158.44",
+      "port": 21119,
+      "delay_ms": 510,
+      "speed_mbps": 0.01,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "shadowsocks-768399336",
+      "type": "ss",
+      "server": "211.91.158.44",
+      "port": 21121,
+      "delay_ms": 510,
+      "speed_mbps": 0.01,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "shadowsocks-768399453",
+      "type": "ss",
+      "server": "211.91.158.26",
+      "port": 21125,
+      "delay_ms": 510,
+      "speed_mbps": 0.01,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "shadowsocks-768399334",
+      "type": "ss",
+      "server": "211.91.158.44",
+      "port": 21109,
+      "delay_ms": 510,
+      "speed_mbps": 0.01,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "shadowsocks-696791488",
+      "type": "ss",
+      "server": "63.181.36.211",
+      "port": 443,
+      "delay_ms": 594,
+      "speed_mbps": 0.01,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "shadowsocks-768399408",
+      "type": "ss",
+      "server": "211.91.158.44",
+      "port": 21114,
+      "delay_ms": 598,
+      "speed_mbps": 0.01,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "shadowsocks-743190429",
+      "type": "ss",
+      "server": "15.236.226.14",
+      "port": 443,
+      "delay_ms": 599,
+      "speed_mbps": 0.01,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "shadowsocks-768399368",
+      "type": "ss",
+      "server": "211.91.158.44",
+      "port": 21107,
+      "delay_ms": 601,
+      "speed_mbps": 0.01,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "shadowsocks-696792820",
+      "type": "ss",
+      "server": "121.46.230.233",
+      "port": 65443,
+      "delay_ms": 611,
+      "speed_mbps": 0.01,
+      "sub": "Au1rxx-clash-full.yaml"
+    }
+  ],
+  "per_sub": {
+    "Au1rxx-clash-full.yaml": {
+      "alive": 61,
+      "total": 81
+    },
+    "BestClash-proxies.yaml": {
+      "alive": 0,
+      "total": 12
+    },
+    "NiceVPN-clash.yaml": {
+      "alive": 3,
+      "total": 1088
+    },
+    "NoMoreWalls-list.yml": {
+      "alive": 1,
+      "total": 11
+    },
+    "Pawdroid-Free-servers": {
+      "alive": 1,
+      "total": 20
+    },
+    "Ruk1ng001-clash.yaml": {
+      "alive": 2,
+      "total": 72
+    },
+    "SSAggregator-merge.yml": {
+      "alive": 0,
+      "total": 1050
+    },
+    "airport-tested.yaml": {
+      "alive": 0,
+      "total": 310
+    },
+    "anaer-clash.yaml": {
+      "alive": 1,
+      "total": 409
+    },
+    "ermaozi-clash.yml": {
+      "alive": 0,
+      "total": 4
+    },
+    "ermaozi-v2ray.txt": {
+      "alive": 0,
+      "total": 7
+    },
+    "free18-c.yaml": {
+      "alive": 1,
+      "total": 99
+    },
+    "mfbpn-trial.yaml": {
+      "alive": 0,
+      "total": 4
+    },
+    "ts-sf-clash": {
+      "alive": 0,
+      "total": 24
+    },
+    "mfuu-v2ray": {
+      "alive": 0,
+      "total": 3
+    },
+    "ts-sf-v2": {
+      "alive": 0,
+      "total": 1
+    }
+  },
+  "per_type": {
+    "131": {
+      "alive": 58,
+      "total": 131
+    },
+    "12": {
+      "alive": 5,
+      "total": 12
+    },
+    "800": {
+      "alive": 3,
+      "total": 800
+    },
+    "441": {
+      "alive": 3,
+      "total": 441
+    },
+    "1755": {
+      "alive": 1,
+      "total": 1755
+    },
+    "56": {
+      "alive": 0,
+      "total": 56
+    }
+  }
+}

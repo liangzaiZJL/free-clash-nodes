@@ -1,0 +1,72 @@
+name: 每日免费节点更新
+
+on:
+  schedule:
+    # 每天 UTC 21:30 = 北京时间次日 05:30
+    - cron: "30 21 * * *"
+  workflow_dispatch: # 也支持在 Actions 页面手动触发
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-sub
+  cancel-in-progress: false
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Download mihomo core (linux)
+        run: python get_mihomo.py linux
+
+      - name: Collect & download subscriptions
+        run: |
+          python collect_sources.py
+          python download_subs.py
+
+      - name: Parse & TCP prefilter
+        run: |
+          python parse_nodes.py
+          python test_tcp.py
+
+      - name: Start mihomo & protocol delay test
+        run: |
+          python gen_config.py
+          nohup ./bin/mihomo -d mihomo -f mihomo/config.yaml > mihomo/run.log 2>&1 &
+          python wait_mihomo.py
+          python test_delay.py
+          python verify_nodes.py
+
+      - name: Speed test
+        run: python speed_test.py
+
+      - name: Generate report & config
+        run: |
+          pkill -f "bin/mihomo" || true
+          python make_summary.py
+          python gen_outputs.py
+
+      - name: Commit results
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add output/ README.md
+          git diff --cached --quiet || git commit -m "chore: 每日节点更新 $(date -u +%F)"
+          git push
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: daily-sub-${{ github.run_number }}
+          path: output/
+          retention-days: 14
