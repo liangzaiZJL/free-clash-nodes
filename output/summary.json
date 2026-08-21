@@ -1,281 +1,208 @@
 {
-  "total_dedup_nodes": 10299,
-  "tcp_ok": 3195,
-  "protocol_alive": 70,
-  "verified_alive": 66,
-  "speed_ok": 56,
+  "total_dedup_nodes": 10275,
+  "tcp_ok": 4413,
+  "protocol_alive": 862,
+  "verified_alive": 841,
+  "speed_ok": 11,
   "top_by_speed": [
     {
-      "name": "hysteria2-755770771",
-      "type": "hysteria2",
-      "server": "45.32.252.144",
+      "name": "🇺🇸US-173.249.209.146-0136",
+      "type": "vmess",
+      "server": "173.249.209.146",
+      "port": 20086,
+      "delay_ms": 17,
+      "speed_mbps": 30.87,
+      "sub": "SSAggregator-merge.yml"
+    },
+    {
+      "name": "🇺🇸 美国-C9357549",
+      "type": "vmess",
+      "server": "165.140.216.141",
       "port": 443,
-      "delay_ms": 407,
-      "speed_mbps": 0.76,
-      "sub": "Au1rxx-clash-full.yaml"
+      "delay_ms": 22,
+      "speed_mbps": 30.66,
+      "sub": "airport-tested.yaml"
     },
     {
-      "name": "hysteria2-468883194",
-      "type": "hysteria2",
-      "server": "66.94.121.46",
+      "name": "vmess-5258765",
+      "type": "vmess",
+      "server": "165.140.216.142",
       "port": 443,
-      "delay_ms": 510,
-      "speed_mbps": 0.36,
+      "delay_ms": 31,
+      "speed_mbps": 28.6,
       "sub": "Au1rxx-clash-full.yaml"
     },
     {
-      "name": "hysteria2-738907388",
-      "type": "hysteria2",
-      "server": "player.wwwinternetvideo.click",
+      "name": "shadowsocks-779606853",
+      "type": "ss",
+      "server": "167.99.103.190",
       "port": 443,
-      "delay_ms": 388,
-      "speed_mbps": 0.24,
+      "delay_ms": 7,
+      "speed_mbps": 26.62,
       "sub": "Au1rxx-clash-full.yaml"
     },
     {
-      "name": "hysteria2-299162412",
-      "type": "hysteria2",
-      "server": "starlink-ft.251313.xyz",
+      "name": "shadowsocks-154",
+      "type": "ss",
+      "server": "108.181.118.10",
+      "port": 8388,
+      "delay_ms": 17,
+      "speed_mbps": 24.63,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "🇺🇸_美国_87",
+      "type": "trojan",
+      "server": "128.14.148.84",
+      "port": 5531,
+      "delay_ms": 28,
+      "speed_mbps": 23.63,
+      "sub": "free18-c.yaml"
+    },
+    {
+      "name": "vmess-145164",
+      "type": "vmess",
+      "server": "82.198.246.233",
+      "port": 180,
+      "delay_ms": 23,
+      "speed_mbps": 21.95,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "🇺🇸US-108.181.0.177-0123",
+      "type": "ss",
+      "server": "108.181.0.177",
+      "port": 8388,
+      "delay_ms": 21,
+      "speed_mbps": 19.01,
+      "sub": "SSAggregator-merge.yml"
+    },
+    {
+      "name": "vmess-98106",
+      "type": "vmess",
+      "server": "216.106.185.141",
+      "port": 22324,
+      "delay_ms": 20,
+      "speed_mbps": 9.22,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "vmess-655843189",
+      "type": "vmess",
+      "server": "82.198.246.250",
+      "port": 180,
+      "delay_ms": 22,
+      "speed_mbps": 5.69,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "🇺🇸US-216.105.168.18-5852",
+      "type": "ss",
+      "server": "216.105.168.18",
       "port": 443,
-      "delay_ms": 407,
-      "speed_mbps": 0.14,
-      "sub": "Au1rxx-clash-full.yaml"
-    },
-    {
-      "name": "\\U0001F534\\U0001F1E8\\U0001F1F3[\\U0001F39E️\\U0001F4E6]_github.com/Ruk1ng001_29791db6",
-      "type": "vless",
-      "server": "120.227.1.43",
-      "port": 12528,
-      "delay_ms": 282,
-      "speed_mbps": 0.01,
-      "sub": "Ruk1ng001-clash.yaml"
-    },
-    {
-      "name": "hysteria2-647019506",
-      "type": "hysteria2",
-      "server": "fast.wwwinternetvideo.click",
-      "port": 443,
-      "delay_ms": 305,
-      "speed_mbps": 0.01,
-      "sub": "Au1rxx-clash-full.yaml"
-    },
-    {
-      "name": "shadowsocks-768399391",
-      "type": "ss",
-      "server": "211.91.158.44",
-      "port": 21110,
-      "delay_ms": 406,
-      "speed_mbps": 0.01,
-      "sub": "Au1rxx-clash-full.yaml"
-    },
-    {
-      "name": "shadowsocks-768399395",
-      "type": "ss",
-      "server": "211.91.158.26",
-      "port": 21103,
-      "delay_ms": 497,
-      "speed_mbps": 0.01,
-      "sub": "Au1rxx-clash-full.yaml"
-    },
-    {
-      "name": "shadowsocks-768399485",
-      "type": "ss",
-      "server": "211.91.158.26",
-      "port": 21121,
-      "delay_ms": 509,
-      "speed_mbps": 0.01,
-      "sub": "Au1rxx-clash-full.yaml"
-    },
-    {
-      "name": "shadowsocks-768399425",
-      "type": "ss",
-      "server": "211.91.158.26",
-      "port": 21119,
-      "delay_ms": 509,
-      "speed_mbps": 0.01,
-      "sub": "Au1rxx-clash-full.yaml"
-    },
-    {
-      "name": "shadowsocks-768399465",
-      "type": "ss",
-      "server": "211.91.158.26",
-      "port": 21109,
-      "delay_ms": 510,
-      "speed_mbps": 0.01,
-      "sub": "Au1rxx-clash-full.yaml"
-    },
-    {
-      "name": "shadowsocks-768399492",
-      "type": "ss",
-      "server": "211.91.158.44",
-      "port": 21119,
-      "delay_ms": 510,
-      "speed_mbps": 0.01,
-      "sub": "Au1rxx-clash-full.yaml"
-    },
-    {
-      "name": "shadowsocks-768399336",
-      "type": "ss",
-      "server": "211.91.158.44",
-      "port": 21121,
-      "delay_ms": 510,
-      "speed_mbps": 0.01,
-      "sub": "Au1rxx-clash-full.yaml"
-    },
-    {
-      "name": "shadowsocks-768399453",
-      "type": "ss",
-      "server": "211.91.158.26",
-      "port": 21125,
-      "delay_ms": 510,
-      "speed_mbps": 0.01,
-      "sub": "Au1rxx-clash-full.yaml"
-    },
-    {
-      "name": "shadowsocks-768399334",
-      "type": "ss",
-      "server": "211.91.158.44",
-      "port": 21109,
-      "delay_ms": 510,
-      "speed_mbps": 0.01,
-      "sub": "Au1rxx-clash-full.yaml"
-    },
-    {
-      "name": "shadowsocks-696791488",
-      "type": "ss",
-      "server": "63.181.36.211",
-      "port": 443,
-      "delay_ms": 594,
-      "speed_mbps": 0.01,
-      "sub": "Au1rxx-clash-full.yaml"
-    },
-    {
-      "name": "shadowsocks-768399408",
-      "type": "ss",
-      "server": "211.91.158.44",
-      "port": 21114,
-      "delay_ms": 598,
-      "speed_mbps": 0.01,
-      "sub": "Au1rxx-clash-full.yaml"
-    },
-    {
-      "name": "shadowsocks-743190429",
-      "type": "ss",
-      "server": "15.236.226.14",
-      "port": 443,
-      "delay_ms": 599,
-      "speed_mbps": 0.01,
-      "sub": "Au1rxx-clash-full.yaml"
-    },
-    {
-      "name": "shadowsocks-768399368",
-      "type": "ss",
-      "server": "211.91.158.44",
-      "port": 21107,
-      "delay_ms": 601,
-      "speed_mbps": 0.01,
-      "sub": "Au1rxx-clash-full.yaml"
-    },
-    {
-      "name": "shadowsocks-696792820",
-      "type": "ss",
-      "server": "121.46.230.233",
-      "port": 65443,
-      "delay_ms": 611,
-      "speed_mbps": 0.01,
-      "sub": "Au1rxx-clash-full.yaml"
+      "delay_ms": 29,
+      "speed_mbps": 1.24,
+      "sub": "SSAggregator-merge.yml"
     }
   ],
   "per_sub": {
     "Au1rxx-clash-full.yaml": {
-      "alive": 61,
-      "total": 81
+      "alive": 553,
+      "total": 800
     },
     "BestClash-proxies.yaml": {
-      "alive": 0,
-      "total": 12
+      "alive": 6,
+      "total": 15
     },
     "NiceVPN-clash.yaml": {
-      "alive": 3,
-      "total": 1088
+      "alive": 8,
+      "total": 1143
     },
     "NoMoreWalls-list.yml": {
-      "alive": 1,
-      "total": 11
-    },
-    "Pawdroid-Free-servers": {
-      "alive": 1,
-      "total": 20
-    },
-    "Ruk1ng001-clash.yaml": {
       "alive": 2,
-      "total": 72
-    },
-    "SSAggregator-merge.yml": {
-      "alive": 0,
-      "total": 1050
-    },
-    "airport-tested.yaml": {
-      "alive": 0,
-      "total": 310
-    },
-    "anaer-clash.yaml": {
-      "alive": 1,
-      "total": 409
-    },
-    "ermaozi-clash.yml": {
-      "alive": 0,
       "total": 4
     },
-    "ermaozi-v2ray.txt": {
-      "alive": 0,
+    "Pawdroid-Free-servers": {
+      "alive": 7,
+      "total": 16
+    },
+    "Ruk1ng001-clash.yaml": {
+      "alive": 112,
+      "total": 145
+    },
+    "SSAggregator-merge.yml": {
+      "alive": 96,
+      "total": 1206
+    },
+    "V2RayAggregator-Eternity": {
+      "alive": 6,
+      "total": 6
+    },
+    "airport-tested.yaml": {
+      "alive": 30,
+      "total": 434
+    },
+    "anaer-clash.yaml": {
+      "alive": 22,
+      "total": 462
+    },
+    "ermaozi-clash.yml": {
+      "alive": 3,
       "total": 7
     },
     "free18-c.yaml": {
-      "alive": 1,
-      "total": 99
+      "alive": 7,
+      "total": 119
+    },
+    "go4sharing-sub.yaml": {
+      "alive": 6,
+      "total": 6
+    },
+    "ts-sf-clash": {
+      "alive": 3,
+      "total": 32
     },
     "mfbpn-trial.yaml": {
       "alive": 0,
-      "total": 4
+      "total": 10
     },
-    "ts-sf-clash": {
-      "alive": 0,
-      "total": 24
-    },
-    "mfuu-v2ray": {
+    "mfuu-clash.yaml": {
       "alive": 0,
       "total": 3
     },
-    "ts-sf-v2": {
+    "vxiaov-clash-provider.yaml": {
       "alive": 0,
+      "total": 4
+    },
+    "ts-sf-v2": {
+      "alive": 1,
       "total": 1
     }
   },
   "per_type": {
-    "131": {
-      "alive": 58,
-      "total": 131
+    "313": {
+      "alive": 226,
+      "total": 313
     },
-    "12": {
-      "alive": 5,
-      "total": 12
+    "1246": {
+      "alive": 84,
+      "total": 1246
     },
-    "800": {
-      "alive": 3,
-      "total": 800
+    "899": {
+      "alive": 449,
+      "total": 899
     },
-    "441": {
-      "alive": 3,
-      "total": 441
+    "1862": {
+      "alive": 46,
+      "total": 1862
     },
-    "1755": {
-      "alive": 1,
-      "total": 1755
+    "15": {
+      "alive": 11,
+      "total": 15
     },
-    "56": {
-      "alive": 0,
-      "total": 56
+    "78": {
+      "alive": 46,
+      "total": 78
     }
   }
 }
