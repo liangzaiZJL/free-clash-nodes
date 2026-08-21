@@ -54,6 +54,8 @@ python test_delay.py
 if errorlevel 1 goto :err
 python verify_nodes.py
 if errorlevel 1 goto :err
+python test_github.py
+if errorlevel 1 goto :err
 
 echo [8/9] 真实下载测速 ^(约 5-10 分钟^)...
 python speed_test.py

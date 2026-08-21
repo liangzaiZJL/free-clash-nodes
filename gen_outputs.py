@@ -341,6 +341,7 @@ def build_clash_yaml(nodes):
     ]
     name2country = {}
     all_names = []
+    gh_names = []
     for c, members in order:
         for seq, n in enumerate(members, 1):
             sp = n.get("speed_mbps")
@@ -356,17 +357,25 @@ def build_clash_yaml(nodes):
             lines.append("\n".join(blk))
             name2country[name] = c
             all_names.append(name)
+            if n.get("github_ms") is not None and n.get("raw_ms") is not None:
+                gh_names.append(name)
 
-    # proxy-groups：每国家一组 + 手动/自动
+    # proxy-groups：每国家一组 + 手动/自动 + GitHub 可用组
     lines += ["", "proxy-groups:"]
     lines += ["  - name: 🚀 手动选择", "    type: select", "    proxies:",
               "      - ♻️ 自动选择", "      - DIRECT"]
+    if gh_names:
+        lines.append("      - 🌐 GitHub")
     for c, members in order:
         lines.append(f"      - {c}")
     lines += ["  - name: ♻️ 自动选择", "    type: url-test",
               "    url: http://www.gstatic.com/generate_204",
               "    interval: 300", "    tolerance: 100", "    proxies:"]
     lines += ["      - " + "\n      - ".join(all_names)]
+    if gh_names:
+        lines += ["  - name: 🌐 GitHub", "    type: select", "    proxies:",
+                  "      - ♻️ 自动选择",
+                  "      - " + "\n      - ".join(gh_names)]
     for c, members in order:
         names = [f"{'⚡' if (m.get('speed_mbps') is not None and m.get('speed_mbps') >= 0.10) else ''}{c}{seq}"
                  for seq, m in enumerate(members, 1)]
@@ -381,6 +390,17 @@ def main():
     _os.makedirs("output", exist_ok=True)
     final = json.load(open("nodes/final_nodes.json", encoding="utf-8"))
     verified = [n for n in final if n.get("delay2_ms") is not None]
+    # 合并 GitHub 可达性测试结果（test_github.py 写在 verified_nodes.json 里）
+    try:
+        vf = json.load(open("nodes/verified_nodes.json", encoding="utf-8"))
+        gh_by_name = {n.get("test_name"): n for n in vf}
+        for n in verified:
+            g = gh_by_name.get(n.get("test_name"), {})
+            if "github_ms" in g:
+                n["github_ms"] = g.get("github_ms")
+                n["raw_ms"] = g.get("raw_ms")
+    except Exception:
+        pass
     summary = json.load(open("output/summary.json", encoding="utf-8"))
     manifest = json.load(open("subs_manifest.json", encoding="utf-8"))
 
