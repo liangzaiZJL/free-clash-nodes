@@ -10,758 +10,458 @@ log-level: info
 ipv6: false
 external-controller: 127.0.0.1:9090
 proxies:
-    # ssr qcg8fhp6y6v9wn.cache872671.com:1302 延迟397ms 速度0.01MB/s
-    - name: "香港1"
-      type: ssr
-      server: "qcg8fhp6y6v9wn.cache872671.com"
-      port: 1302
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr 5zkpq9sentjnah.cache872671.com:1322 延迟494ms 速度0.01MB/s
-    - name: "香港2"
-      type: ssr
-      server: "5zkpq9sentjnah.cache872671.com"
-      port: 1322
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr 4vnx5kqwk8mxsr.cache872671.com:1320 延迟494ms 速度0.01MB/s
-    - name: "香港3"
-      type: ssr
-      server: "4vnx5kqwk8mxsr.cache872671.com"
-      port: 1320
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr neetb62ecrq2zg.cache872671.com:1304 延迟498ms 速度0.01MB/s
-    - name: "香港4"
-      type: ssr
-      server: "neetb62ecrq2zg.cache872671.com"
-      port: 1304
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ss hk.kexueyun.top:1011 延迟306ms 速度0.00MB/s
-    - name: "香港5"
-      type: ss
-      server: "hk.kexueyun.top"
-      port: 1011
-      cipher: "2022-blake3-aes-256-gcm"
-      password: "OLII2zRkBbVCfoWY9vuMpe5dWfhq6BlfN9r12fparDw=:XIoUs91l+3EgTnmaCrNNChFBggx74qHudT9sZNyxW/Q="
-    # ss 95.40.120.162:8319 延迟397ms 速度n/a
-    - name: "香港6"
-      type: ss
-      server: "95.40.120.162"
-      port: 8319
-      cipher: "chacha20-ietf-poly1305"
-      password: "ljqdalu13.."
-    # ssr qcg8fhp6y6v9wn.cache872671.com:1301 延迟510ms 速度n/a
-    - name: "香港7"
-      type: ssr
-      server: "qcg8fhp6y6v9wn.cache872671.com"
-      port: 1301
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr b82gubf8e7m3ar.cache872671.com:1329 延迟510ms 速度n/a
-    - name: "香港8"
-      type: ssr
-      server: "b82gubf8e7m3ar.cache872671.com"
-      port: 1329
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr 78v9m3qxh6eedn.cache872671.com:1321 延迟679ms 速度n/a
-    - name: "香港9"
-      type: ssr
-      server: "78v9m3qxh6eedn.cache872671.com"
-      port: 1321
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr a83jb3sztjnqd4.cache872671.com:1310 延迟714ms 速度n/a
-    - name: "香港10"
-      type: ssr
-      server: "a83jb3sztjnqd4.cache872671.com"
-      port: 1310
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr xr9btkx2uwygfb.cache872671.com:1327 延迟817ms 速度n/a
-    - name: "香港11"
-      type: ssr
-      server: "xr9btkx2uwygfb.cache872671.com"
-      port: 1327
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr k92vnke3356ns4.cache872671.com:1326 延迟1214ms 速度n/a
-    - name: "香港12"
-      type: ssr
-      server: "k92vnke3356ns4.cache872671.com"
-      port: 1326
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr qd8vhtgktk4hkg.cache872671.com:1308 延迟1521ms 速度n/a
-    - name: "香港13"
-      type: ssr
-      server: "qd8vhtgktk4hkg.cache872671.com"
-      port: 1308
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr kxftjn8bz7upwj.cache872671.com:1307 延迟1530ms 速度n/a
-    - name: "香港14"
-      type: ssr
-      server: "kxftjn8bz7upwj.cache872671.com"
-      port: 1307
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr zquxqu4vxyxgue.cache872671.com:1309 延迟1534ms 速度n/a
-    - name: "香港15"
-      type: ssr
-      server: "zquxqu4vxyxgue.cache872671.com"
-      port: 1309
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr hqux7dvs9tftys.cache872671.com:1306 延迟1738ms 速度n/a
-    - name: "香港16"
-      type: ssr
-      server: "hqux7dvs9tftys.cache872671.com"
-      port: 1306
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ss 212.192.15.46:10666 延迟2440ms 速度n/a
-    - name: "香港17"
-      type: ss
-      server: "212.192.15.46"
-      port: 10666
-      cipher: "aes-256-gcm"
-      password: "72553320ae6bcc8f"
-    # ss e1acw359hdvf.cdn000.com:31201 延迟493ms 速度0.01MB/s
-    - name: "日本1"
-      type: ss
-      server: "e1acw359hdvf.cdn000.com"
-      port: 31201
-      cipher: "2022-blake3-aes-128-gcm"
-      password: "Y2FkNzhhZWQ0MzA1NzlhZA==:ODNiMjQ4NDMtYTY2Mi00Mg=="
-    # ss 54.95.207.148:8316 延迟401ms 速度n/a
-    - name: "日本2"
-      type: ss
-      server: "54.95.207.148"
-      port: 8316
-      cipher: "chacha20-ietf-poly1305"
-      password: "ljqdalu13.."
-    # ss e1acw359hdvf.cdn000.com:31202 延迟510ms 速度n/a
-    - name: "日本3"
-      type: ss
-      server: "e1acw359hdvf.cdn000.com"
-      port: 31202
-      cipher: "2022-blake3-aes-128-gcm"
-      password: "Y2FkNzhhZWQ0MzA1NzlhZA==:ODNiMjQ4NDMtYTY2Mi00Mg=="
-    # ssr eg24u58d52pbyr.server927871.com:1337 延迟608ms 速度n/a
-    - name: "日本4"
-      type: ssr
-      server: "eg24u58d52pbyr.server927871.com"
-      port: 1337
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr 2rrytzwkxrqxaj.server927871.com:1338 延迟608ms 速度n/a
-    - name: "日本5"
-      type: ssr
-      server: "2rrytzwkxrqxaj.server927871.com"
-      port: 1338
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr gtjmbbnnre3qz4.server927871.com:1335 延迟614ms 速度n/a
-    - name: "日本6"
-      type: ssr
-      server: "gtjmbbnnre3qz4.server927871.com"
-      port: 1335
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr mqyrg42tdc888n.server927871.com:1339 延迟804ms 速度n/a
-    - name: "日本7"
-      type: ssr
-      server: "mqyrg42tdc888n.server927871.com"
-      port: 1339
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr nm5bpqbaen3bjt.server927871.com:1334 延迟902ms 速度n/a
-    - name: "日本8"
-      type: ssr
-      server: "nm5bpqbaen3bjt.server927871.com"
-      port: 1334
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr gtcpse4ptcm46h.server927871.com:1333 延迟1021ms 速度n/a
-    - name: "日本9"
-      type: ssr
-      server: "gtcpse4ptcm46h.server927871.com"
-      port: 1333
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr f5hbtjrm.server927871.com:1399 延迟1329ms 速度n/a
-    - name: "日本10"
-      type: ssr
-      server: "f5hbtjrm.server927871.com"
-      port: 1399
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr pvpyhrpmm4wste.server927871.com:1336 延迟1625ms 速度n/a
-    - name: "日本11"
-      type: ssr
-      server: "pvpyhrpmm4wste.server927871.com"
-      port: 1336
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr 9q2z57eqtbgqvf.server927871.com:1332 延迟1636ms 速度n/a
-    - name: "日本12"
-      type: ssr
-      server: "9q2z57eqtbgqvf.server927871.com"
-      port: 1332
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # vless jp.sofast.live:52683 延迟2035ms 速度n/a
-    - name: "日本13"
-      type: vless
-      server: "jp.sofast.live"
-      port: 52683
-      uuid: "399b6b23-cc40-4831-a494-61948e2df133"
-    # hysteria2 player.wwwinternetvideo.click:443 延迟407ms 速度0.76MB/s
-    - name: "⚡德国1"
-      type: hysteria2
-      server: "player.wwwinternetvideo.click"
-      port: 443
-      password: "V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8"
-      sni: "player.wwwinternetvideo.click"
-      skip-cert-verify: true
-    # ss 18.197.108.25:443 延迟592ms 速度n/a
-    - name: "德国2"
-      type: ss
-      server: "18.197.108.25"
-      port: 443
-      cipher: "aes-256-cfb"
-      password: "amazonskr05"
-    # ss 63.176.139.123:443 延迟597ms 速度n/a
-    - name: "德国3"
-      type: ss
-      server: "63.176.139.123"
-      port: 443
-      cipher: "aes-256-cfb"
-      password: "amazonskr05"
-    # ss 3.75.226.122:443 延迟597ms 速度n/a
-    - name: "德国4"
-      type: ss
-      server: "3.75.226.122"
-      port: 443
-      cipher: "aes-256-cfb"
-      password: "amazonskr05"
-    # ss 3.76.102.125:443 延迟600ms 速度n/a
-    - name: "德国5"
-      type: ss
-      server: "3.76.102.125"
-      port: 443
-      cipher: "aes-256-cfb"
-      password: "amazonskr05"
-    # ss 130.61.178.226:59924 延迟601ms 速度n/a
-    - name: "德国6"
-      type: ss
-      server: "130.61.178.226"
-      port: 59924
-      cipher: "2022-blake3-chacha20-poly1305"
-      password: "37GUnJBhHPQHIgIPdlC3I2z9PkMtVp1uXbUnB7NKNCk="
-    # ss 130.61.225.239:59924 延迟612ms 速度n/a
-    - name: "德国7"
-      type: ss
-      server: "130.61.225.239"
-      port: 59924
-      cipher: "2022-blake3-chacha20-poly1305"
-      password: "F5JCVI53YRCW4UgRGI9Vr/nTowZNwHjL06QoxDeNBFY="
-    # ss 3.70.135.154:443 延迟613ms 速度n/a
-    - name: "德国8"
-      type: ss
-      server: "3.70.135.154"
-      port: 443
-      cipher: "aes-256-cfb"
-      password: "amazonskr05"
-    # ss 130.61.45.116:59924 延迟802ms 速度n/a
-    - name: "德国9"
-      type: ss
-      server: "130.61.45.116"
-      port: 59924
-      cipher: "2022-blake3-chacha20-poly1305"
-      password: "GTE6aBIunVF3QcgseTwgvwf3VIU/lCB5HMXk5GnSPWw="
-    # ss 130.61.148.92:59924 延迟817ms 速度n/a
-    - name: "德国10"
-      type: ss
-      server: "130.61.148.92"
-      port: 59924
-      cipher: "2022-blake3-chacha20-poly1305"
-      password: "iMCyLh/KjHKyfw2Y9uT9AK5zu6o04oI6AtshYHbgpVY="
-    # ss 161.118.236.226:56927 延迟392ms 速度0.00MB/s
-    - name: "新加坡1"
-      type: ss
-      server: "161.118.236.226"
-      port: 56927
-      cipher: "2022-blake3-chacha20-poly1305"
-      password: "mK3U4CcxreExT+4ZbQ+ixTCRA0PpbwB2qEYHsgySaLU="
-    # ssr fdemtyhemkjdc2.node897828.com:1352 延迟598ms 速度n/a
-    - name: "新加坡2"
-      type: ssr
-      server: "fdemtyhemkjdc2.node897828.com"
-      port: 1352
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ss 138.2.81.62:56927 延迟612ms 速度n/a
-    - name: "新加坡3"
-      type: ss
-      server: "138.2.81.62"
-      port: 56927
-      cipher: "2022-blake3-chacha20-poly1305"
-      password: "ZVv41ijfHYM4T4gSUm9qqxMGkXswk5GNBGIFZz5sN6c="
-    # ssr 7yz6ba4ygjvcq6.node897828.com:1357 延迟612ms 速度n/a
-    - name: "新加坡4"
-      type: ssr
-      server: "7yz6ba4ygjvcq6.node897828.com"
-      port: 1357
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr shx57c8k2zb9bj.node897828.com:1354 延迟612ms 速度n/a
-    - name: "新加坡5"
-      type: ssr
-      server: "shx57c8k2zb9bj.node897828.com"
-      port: 1354
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr 7cnsbeetbcdfs2.node897828.com:1359 延迟613ms 速度n/a
-    - name: "新加坡6"
-      type: ssr
-      server: "7cnsbeetbcdfs2.node897828.com"
-      port: 1359
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr 894azjvakdy9t7.node897828.com:1358 延迟714ms 速度n/a
-    - name: "新加坡7"
-      type: ssr
-      server: "894azjvakdy9t7.node897828.com"
-      port: 1358
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr zuyvqthn5jzjbh.node897828.com:1351 延迟910ms 速度n/a
-    - name: "新加坡8"
-      type: ssr
-      server: "zuyvqthn5jzjbh.node897828.com"
-      port: 1351
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr waa3g8tqb78k85.node897828.com:1356 延迟1114ms 速度n/a
-    - name: "新加坡9"
-      type: ssr
-      server: "waa3g8tqb78k85.node897828.com"
-      port: 1356
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ss 52.47.54.187:443 延迟576ms 速度n/a
-    - name: "法国1"
-      type: ss
-      server: "52.47.54.187"
-      port: 443
-      cipher: "aes-256-cfb"
-      password: "amazonskr05"
-    # ss 52.47.178.34:443 延迟596ms 速度n/a
-    - name: "法国2"
-      type: ss
-      server: "52.47.178.34"
-      port: 443
-      cipher: "aes-256-cfb"
-      password: "amazonskr05"
-    # ss 95.170.13.47:65443 延迟596ms 速度n/a
-    - name: "法国3"
-      type: ss
-      server: "95.170.13.47"
-      port: 65443
-      cipher: "aes-256-cfb"
-      password: "7eadc6dbe2ae"
-    # ss 13.38.78.128:443 延迟612ms 速度n/a
-    - name: "法国4"
-      type: ss
-      server: "13.38.78.128"
-      port: 443
-      cipher: "aes-256-cfb"
-      password: "amazonskr05"
-    # ss 51.44.170.194:443 延迟705ms 速度n/a
-    - name: "法国5"
-      type: ss
-      server: "51.44.170.194"
-      port: 443
-      cipher: "aes-256-cfb"
-      password: "amazonskr05"
-    # ss 51.44.167.151:443 延迟798ms 速度n/a
-    - name: "法国6"
-      type: ss
-      server: "51.44.167.151"
-      port: 443
-      cipher: "aes-256-cfb"
-      password: "amazonskr05"
-    # ss 13.38.46.203:443 延迟813ms 速度n/a
-    - name: "法国7"
-      type: ss
-      server: "13.38.46.203"
-      port: 443
-      cipher: "aes-256-cfb"
-      password: "amazonskr05"
-    # ss 13.37.226.110:443 延迟817ms 速度n/a
-    - name: "法国8"
-      type: ss
-      server: "13.37.226.110"
-      port: 443
-      cipher: "aes-256-cfb"
-      password: "amazonskr05"
-    # ssr tb77hqsccm8cmv.server927871.com:1382 延迟920ms 速度n/a
-    - name: "美国1"
-      type: ssr
-      server: "tb77hqsccm8cmv.server927871.com"
-      port: 1382
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr c8yfxszk8c7vus.server927871.com:1380 延迟1225ms 速度n/a
-    - name: "美国2"
-      type: ssr
-      server: "c8yfxszk8c7vus.server927871.com"
-      port: 1380
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr 7newvdyqkyyhwm.server927871.com:1388 延迟1635ms 速度n/a
-    - name: "美国3"
-      type: ssr
-      server: "7newvdyqkyyhwm.server927871.com"
-      port: 1388
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # vless 180.178.60.254:10000 延迟1717ms 速度n/a
-    - name: "美国4"
-      type: vless
-      server: "180.178.60.254"
-      port: 10000
-      uuid: "431fe973-a43a-4fac-bf83-2a772e0d0625"
-      network: tcp
-    # ss 199.181.197.38:443 延迟1837ms 速度n/a
-    - name: "美国5"
-      type: ss
-      server: "199.181.197.38"
-      port: 443
-      cipher: "none"
-      password: "3e96ef7d-8637-42c2-ac73-75182196e755"
-    # ssr ymbf4ec7zffrtv.server927871.com:1381 延迟1932ms 速度n/a
-    - name: "美国6"
-      type: ssr
-      server: "ymbf4ec7zffrtv.server927871.com"
-      port: 1381
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr cwmk2a76ydjwf7.server927871.com:1386 延迟2542ms 速度n/a
-    - name: "美国7"
-      type: ssr
-      server: "cwmk2a76ydjwf7.server927871.com"
-      port: 1386
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ssr 2n2m2r8gkvr7kx.server927871.com:1383 延迟2558ms 速度n/a
-    - name: "美国8"
-      type: ssr
-      server: "2n2m2r8gkvr7kx.server927871.com"
-      port: 1383
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # vmess 112.132.215.108:50002 延迟305ms 速度n/a
+    # vless 120.227.1.43:12528 延迟383ms 速度0.01MB/s
     - name: "中国1"
-      type: vmess
-      server: "112.132.215.108"
-      port: 50002
-      uuid: "418048af-a293-4b99-9b0c-98ca3580dd24"
-      alterId: 64
-      cipher: "auto"
-      network: tcp
-    # vless 120.227.1.43:12528 延迟402ms 速度n/a
-    - name: "中国2"
       type: vless
       server: "120.227.1.43"
       port: 12528
       uuid: "f0169b08-43fd-4dc3-8195-18f6ad2fe39d"
-    # ss 121.46.230.136:65443 延迟1416ms 速度n/a
+    # ss 211.91.158.26:21121 延迟383ms 速度0.01MB/s
+    - name: "中国2"
+      type: ss
+      server: "211.91.158.26"
+      port: 21121
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.26:21119 延迟509ms 速度0.01MB/s
     - name: "中国3"
       type: ss
-      server: "121.46.230.136"
-      port: 65443
-      cipher: "aes-256-cfb"
-      password: "7eadc6dbe2ae"
-    # vless us22.sofast.live:58011 延迟2033ms 速度n/a
+      server: "211.91.158.26"
+      port: 21119
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.44:21121 延迟510ms 速度0.01MB/s
     - name: "中国4"
+      type: ss
+      server: "211.91.158.44"
+      port: 21121
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.26:21103 延迟526ms 速度0.01MB/s
+    - name: "中国5"
+      type: ss
+      server: "211.91.158.26"
+      port: 21103
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.44:21119 延迟551ms 速度0.01MB/s
+    - name: "中国6"
+      type: ss
+      server: "211.91.158.44"
+      port: 21119
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.44:21110 延迟552ms 速度0.01MB/s
+    - name: "中国7"
+      type: ss
+      server: "211.91.158.44"
+      port: 21110
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.44:21103 延迟585ms 速度0.01MB/s
+    - name: "中国8"
+      type: ss
+      server: "211.91.158.44"
+      port: 21103
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.26:21107 延迟593ms 速度0.01MB/s
+    - name: "中国9"
+      type: ss
+      server: "211.91.158.26"
+      port: 21107
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.44:21107 延迟598ms 速度n/a
+    - name: "中国10"
+      type: ss
+      server: "211.91.158.44"
+      port: 21107
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.44:21123 延迟611ms 速度n/a
+    - name: "中国11"
+      type: ss
+      server: "211.91.158.44"
+      port: 21123
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.44:21125 延迟612ms 速度n/a
+    - name: "中国12"
+      type: ss
+      server: "211.91.158.44"
+      port: 21125
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.26:21114 延迟624ms 速度n/a
+    - name: "中国13"
+      type: ss
+      server: "211.91.158.26"
+      port: 21114
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.26:21125 延迟652ms 速度n/a
+    - name: "中国14"
+      type: ss
+      server: "211.91.158.26"
+      port: 21125
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.44:21114 延迟656ms 速度n/a
+    - name: "中国15"
+      type: ss
+      server: "211.91.158.44"
+      port: 21114
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.26:21105 延迟691ms 速度n/a
+    - name: "中国16"
+      type: ss
+      server: "211.91.158.26"
+      port: 21105
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.44:21108 延迟698ms 速度n/a
+    - name: "中国17"
+      type: ss
+      server: "211.91.158.44"
+      port: 21108
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.44:21118 延迟699ms 速度n/a
+    - name: "中国18"
+      type: ss
+      server: "211.91.158.44"
+      port: 21118
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.44:21105 延迟700ms 速度n/a
+    - name: "中国19"
+      type: ss
+      server: "211.91.158.44"
+      port: 21105
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.26:21117 延迟701ms 速度n/a
+    - name: "中国20"
+      type: ss
+      server: "211.91.158.26"
+      port: 21117
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.26:21118 延迟717ms 速度n/a
+    - name: "中国21"
+      type: ss
+      server: "211.91.158.26"
+      port: 21118
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.26:21104 延迟778ms 速度n/a
+    - name: "中国22"
+      type: ss
+      server: "211.91.158.26"
+      port: 21104
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.44:21126 延迟793ms 速度n/a
+    - name: "中国23"
+      type: ss
+      server: "211.91.158.44"
+      port: 21126
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.26:21113 延迟797ms 速度n/a
+    - name: "中国24"
+      type: ss
+      server: "211.91.158.26"
+      port: 21113
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.44:21117 延迟802ms 速度n/a
+    - name: "中国25"
+      type: ss
+      server: "211.91.158.44"
+      port: 21117
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.26:21126 延迟805ms 速度n/a
+    - name: "中国26"
+      type: ss
+      server: "211.91.158.26"
+      port: 21126
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.44:21113 延迟806ms 速度n/a
+    - name: "中国27"
+      type: ss
+      server: "211.91.158.44"
+      port: 21113
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.44:21122 延迟817ms 速度n/a
+    - name: "中国28"
+      type: ss
+      server: "211.91.158.44"
+      port: 21122
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.26:21120 延迟832ms 速度n/a
+    - name: "中国29"
+      type: ss
+      server: "211.91.158.26"
+      port: 21120
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.44:21116 延迟905ms 速度n/a
+    - name: "中国30"
+      type: ss
+      server: "211.91.158.44"
+      port: 21116
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # ss 211.91.158.44:21104 延迟1306ms 速度n/a
+    - name: "中国31"
+      type: ss
+      server: "211.91.158.44"
+      port: 21104
+      cipher: "chacha20-ietf-poly1305"
+      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
+    # vless us22.sofast.live:58011 延迟1605ms 速度n/a
+    - name: "中国32"
       type: vless
       server: "us22.sofast.live"
       port: 58011
       uuid: "0afc6426-606c-48e7-bd70-3c424a416842"
-    # vless 157.137.209.176:62145 延迟919ms 速度n/a
+    # vless 157.137.218.106:62145 延迟792ms 速度n/a
     - name: "哥伦比亚1"
-      type: vless
-      server: "157.137.209.176"
-      port: 62145
-      uuid: "8fb65472-5957-4f64-ba2d-b5812b2f155a"
-      network: tcp
-    # vless 157.137.218.106:62145 延迟920ms 速度n/a
-    - name: "哥伦比亚2"
       type: vless
       server: "157.137.218.106"
       port: 62145
       uuid: "8fb65472-5957-4f64-ba2d-b5812b2f155a"
       network: tcp
-    # vless 157.137.214.234:62145 延迟1021ms 速度n/a
+    # vless 157.137.209.176:62145 延迟808ms 速度n/a
+    - name: "哥伦比亚2"
+      type: vless
+      server: "157.137.209.176"
+      port: 62145
+      uuid: "8fb65472-5957-4f64-ba2d-b5812b2f155a"
+      network: tcp
+    # vless 157.137.214.234:62145 延迟816ms 速度n/a
     - name: "哥伦比亚3"
       type: vless
       server: "157.137.214.234"
       port: 62145
       uuid: "8fb65472-5957-4f64-ba2d-b5812b2f155a"
       network: tcp
-    # vless 157.137.218.222:62145 延迟1021ms 速度n/a
+    # vless 157.137.218.222:62145 延迟909ms 速度n/a
     - name: "哥伦比亚4"
       type: vless
       server: "157.137.218.222"
       port: 62145
       uuid: "8fb65472-5957-4f64-ba2d-b5812b2f155a"
       network: tcp
-    # ss 144.24.226.68:61312 延迟603ms 速度n/a
-    - name: "英国1"
+    # ss 130.61.225.239:59924 延迟612ms 速度n/a
+    - name: "德国1"
       type: ss
-      server: "144.24.226.68"
-      port: 61312
+      server: "130.61.225.239"
+      port: 59924
       cipher: "2022-blake3-chacha20-poly1305"
-      password: "FYpB220ObY0KRjx+Y394dwHNFC25PBErBm4gHYnqqZE="
-    # ss 129.151.87.13:61312 延迟704ms 速度n/a
-    - name: "英国2"
+      password: "F5JCVI53YRCW4UgRGI9Vr/nTowZNwHjL06QoxDeNBFY="
+    # ss 130.61.178.226:59924 延迟612ms 速度n/a
+    - name: "德国2"
       type: ss
-      server: "129.151.87.13"
-      port: 61312
+      server: "130.61.178.226"
+      port: 59924
       cipher: "2022-blake3-chacha20-poly1305"
-      password: "A6InytdtDyfER2TnQ6BJPWUl88itBkS6ksaMglhcgGU="
-    # ss 129.151.89.64:61312 延迟813ms 速度n/a
-    - name: "英国3"
+      password: "37GUnJBhHPQHIgIPdlC3I2z9PkMtVp1uXbUnB7NKNCk="
+    # ss 130.61.238.66:59924 延迟803ms 速度n/a
+    - name: "德国3"
       type: ss
-      server: "129.151.89.64"
-      port: 61312
+      server: "130.61.238.66"
+      port: 59924
       cipher: "2022-blake3-chacha20-poly1305"
-      password: "LF7cJ45rErQj6klFY7TkrQI4o6rvqfLIOARby9Z2V/4="
-    # ssr uhs2yt57cxjawv.server927871.com:1393 延迟1124ms 速度n/a
-    - name: "英国4"
-      type: ssr
-      server: "uhs2yt57cxjawv.server927871.com"
-      port: 1393
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ss robon.mashhad1market.ir:1080 延迟596ms 速度n/a
-    - name: "伊朗1"
+      password: "j8EiUH3gEEIZpk9+m/xPzl7W8tFKgN8X2/ZCEUI4zF8="
+    # ss 130.61.148.92:59924 延迟818ms 速度n/a
+    - name: "德国4"
       type: ss
-      server: "robon.mashhad1market.ir"
-      port: 1080
-      cipher: "chacha20-ietf-poly1305"
-      password: "TU4NUJuMe4XlZ3NCQ_1KiQ"
-    # ss netixu.mashhad1market.ir:1080 延迟612ms 速度n/a
-    - name: "伊朗2"
+      server: "130.61.148.92"
+      port: 59924
+      cipher: "2022-blake3-chacha20-poly1305"
+      password: "iMCyLh/KjHKyfw2Y9uT9AK5zu6o04oI6AtshYHbgpVY="
+    # ss 206.189.223.234:443 延迟655ms 速度n/a
+    - name: "美国1"
       type: ss
-      server: "netixu.mashhad1market.ir"
-      port: 1080
-      cipher: "chacha20-ietf-poly1305"
-      password: "TU4NUJuMe4XlZ3NCQ_1KiQ"
-    # ss 159.89.114.254:443 延迟697ms 速度n/a
-    - name: "加拿大1"
-      type: ss
-      server: "159.89.114.254"
+      server: "206.189.223.234"
       port: 443
       cipher: "aes-256-gcm"
-      password: "jCacZrWkhonLqnvd"
-    # ss 142.93.149.39:80 延迟714ms 速度n/a
-    - name: "加拿大2"
-      type: ss
-      server: "142.93.149.39"
-      port: 80
-      cipher: "aes-256-gcm"
-      password: "cj5Znxe2XuodJQB0"
-    # vless 144.21.38.148:62145 延迟609ms 速度n/a
-    - name: "荷兰1"
+      password: "YmrYLpErhi5oTrrv"
+    # vless 66.33.22.241:38228 延迟1963ms 速度n/a
+    - name: "美国2"
       type: vless
-      server: "144.21.38.148"
-      port: 62145
-      uuid: "8fb65472-5957-4f64-ba2d-b5812b2f155a"
-      network: tcp
+      server: "66.33.22.241"
+      port: 38228
+      uuid: "9b41e98e-8e55-4b06-8a57-2f61c58cfccd"
+      skip-cert-verify: true
+    # vless dx.mmhh.eu.cc:443 延迟2322ms 速度n/a
+    - name: "美国3"
+      type: vless
+      server: "dx.mmhh.eu.cc"
+      port: 443
+      uuid: "e5cc16a6-ea42-46b2-82ae-ad2157e1641b"
+      network: ws
+      tls: true
+      servername: "hhlfy.twiladaphne.ndjp.net"
+      ws-opts: {path: "/fp=chrome", headers: {Host: "hhlfy.twiladaphne.ndjp.net"}}
+    # ss 199.181.197.38:443 延迟3122ms 速度n/a
+    - name: "美国4"
+      type: ss
+      server: "199.181.197.38"
+      port: 443
+      cipher: "none"
+      password: "3e96ef7d-8637-42c2-ac73-75182196e755"
     # ss 158.178.146.102:45819 延迟612ms 速度n/a
-    - name: "荷兰2"
+    - name: "荷兰1"
       type: ss
       server: "158.178.146.102"
       port: 45819
       cipher: "2022-blake3-chacha20-poly1305"
       password: "Bw/0mkpYH8e2Cmu49+kEAS5UDv7UL2D/alKO76ACw/0="
-    # ss 49.254.204.133:1774 延迟499ms 速度0.02MB/s
-    - name: "韩国1"
+    # vless 144.21.38.148:62145 延迟612ms 速度n/a
+    - name: "荷兰2"
+      type: vless
+      server: "144.21.38.148"
+      port: 62145
+      uuid: "8fb65472-5957-4f64-ba2d-b5812b2f155a"
+      network: tcp
+    # trojan 142.93.226.128:443 延迟1621ms 速度n/a
+    - name: "荷兰3"
+      type: trojan
+      server: "142.93.226.128"
+      port: 443
+      password: "8c03bc97-6dd1-485b-9ae6-c0539929592c"
+      skip-cert-verify: true
+    # ss hk.kexueyun.top:1011 延迟292ms 速度0.01MB/s
+    - name: "香港1"
       type: ss
-      server: "49.254.204.133"
-      port: 1774
-      cipher: "aes-256-cfb"
-      password: "1234!@#$"
-    # ss 121.46.230.138:65443 延迟496ms 速度0.01MB/s
-    - name: "韩国2"
+      server: "hk.kexueyun.top"
+      port: 1011
+      cipher: "2022-blake3-aes-256-gcm"
+      password: "OLII2zRkBbVCfoWY9vuMpe5dWfhq6BlfN9r12fparDw=:XIoUs91l+3EgTnmaCrNNChFBggx74qHudT9sZNyxW/Q="
+    # ss 95.40.120.162:8319 延迟441ms 速度n/a
+    - name: "香港2"
       type: ss
-      server: "121.46.230.138"
-      port: 65443
-      cipher: "aes-256-cfb"
-      password: "7eadc6dbe2ae"
-    # ss 195.133.23.200:10666 延迟2046ms 速度n/a
-    - name: "俄罗斯1"
+      server: "95.40.120.162"
+      port: 8319
+      cipher: "chacha20-ietf-poly1305"
+      password: "ljqdalu13.."
+    # ss 212.192.15.46:10666 延迟1445ms 速度n/a
+    - name: "香港3"
       type: ss
-      server: "195.133.23.200"
+      server: "212.192.15.46"
       port: 10666
       cipher: "aes-256-gcm"
-      password: "81a20429165df87e"
-    # ssr pw3sdme5v2kj2c.node897828.com:1372 延迟612ms 速度n/a
-    - name: "台湾1"
-      type: ssr
-      server: "pw3sdme5v2kj2c.node897828.com"
-      port: 1372
-      protocol: auth_aes128_md5
-      cipher: "chacha20-ietf"
-      obfs: plain
-      password: "MAYING"
-      protocol-param: "31296:U2T93o"
-    # ss 163.176.6.223:59319 延迟1022ms 速度n/a
+      password: "72553320ae6bcc8f"
+    # ss netixu.mashhad1market.ir:1080 延迟613ms 速度n/a
+    - name: "伊朗1"
+      type: ss
+      server: "netixu.mashhad1market.ir"
+      port: 1080
+      cipher: "chacha20-ietf-poly1305"
+      password: "TU4NUJuMe4XlZ3NCQ_1KiQ"
+    # ss robon.mashhad1market.ir:1080 延迟713ms 速度n/a
+    - name: "伊朗2"
+      type: ss
+      server: "robon.mashhad1market.ir"
+      port: 1080
+      cipher: "chacha20-ietf-poly1305"
+      password: "TU4NUJuMe4XlZ3NCQ_1KiQ"
+    # ss 54.95.207.148:8316 延迟405ms 速度n/a
+    - name: "日本1"
+      type: ss
+      server: "54.95.207.148"
+      port: 8316
+      cipher: "chacha20-ietf-poly1305"
+      password: "ljqdalu13.."
+    # vless jp.sofast.live:52683 延迟2353ms 速度n/a
+    - name: "日本2"
+      type: vless
+      server: "jp.sofast.live"
+      port: 52683
+      uuid: "399b6b23-cc40-4831-a494-61948e2df133"
+    # ss 129.151.87.13:61312 延迟612ms 速度n/a
+    - name: "英国1"
+      type: ss
+      server: "129.151.87.13"
+      port: 61312
+      cipher: "2022-blake3-chacha20-poly1305"
+      password: "A6InytdtDyfER2TnQ6BJPWUl88itBkS6ksaMglhcgGU="
+    # ss 144.24.226.68:61312 延迟680ms 速度n/a
+    - name: "英国2"
+      type: ss
+      server: "144.24.226.68"
+      port: 61312
+      cipher: "2022-blake3-chacha20-poly1305"
+      password: "FYpB220ObY0KRjx+Y394dwHNFC25PBErBm4gHYnqqZE="
+    # ss 159.89.112.218:443 延迟858ms 速度n/a
+    - name: "加拿大1"
+      type: ss
+      server: "159.89.112.218"
+      port: 443
+      cipher: "aes-256-gcm"
+      password: "fc0heeXAqzNX86aP"
+    # ss 163.176.6.223:59319 延迟1020ms 速度n/a
     - name: "巴西1"
       type: ss
       server: "163.176.6.223"
       port: 59319
       cipher: "2022-blake3-chacha20-poly1305"
       password: "SP1M0IipjvtsuKVyn9U2iK+ZKuuQ0afVhLCicK9pO8Y="
-    # ss 194.87.47.162:10901 延迟817ms 速度n/a
-    - name: "意大利1"
+    # ss 138.2.81.62:56927 延迟407ms 速度n/a
+    - name: "新加坡1"
       type: ss
-      server: "194.87.47.162"
-      port: 10901
-      cipher: "aes-256-gcm"
-      password: "d1fa2f4b98a38bc8"
-    # ss 103.169.67.34:65443 延迟1007ms 速度n/a
+      server: "138.2.81.62"
+      port: 56927
+      cipher: "2022-blake3-chacha20-poly1305"
+      password: "ZVv41ijfHYM4T4gSUm9qqxMGkXswk5GNBGIFZz5sN6c="
+    # vless 104.249.43.148:443 延迟1629ms 速度n/a
+    - name: "格鲁吉亚1"
+      type: vless
+      server: "104.249.43.148"
+      port: 443
+      uuid: "5e1083b9-4d4f-50ef-93e7-6e966dfce1f9"
+      tls: true
+      servername: "microsoft.com"
+      client-fingerprint: "firefox"
+      reality-opts: {public-key: "6M7gWx17aFEwFa65jjCLldc2UqOUQuBbQO_Rkx5Z9h4", short-id: "d1172867"}
+    # ss 95.170.13.47:65443 延迟600ms 速度n/a
+    - name: "法国1"
+      type: ss
+      server: "95.170.13.47"
+      port: 65443
+      cipher: "aes-256-cfb"
+      password: "7eadc6dbe2ae"
+    # ss 103.169.67.34:65443 延迟407ms 速度0.02MB/s
     - name: "泰国1"
       type: ss
       server: "103.169.67.34"
       port: 65443
       cipher: "aes-256-cfb"
       password: "7eadc6dbe2ae"
-    # trojan 103.9.77.6:443 延迟714ms 速度n/a
+    # trojan 103.9.77.6:443 延迟599ms 速度n/a
     - name: "越南1"
       type: trojan
       server: "103.9.77.6"
       port: 443
       password: "5a92d674-308c-4d95-b283-28383e63a59b"
       skip-cert-verify: true
-    # ss 118.107.222.231:65443 延迟598ms 速度n/a
+    # ss 121.46.230.138:65443 延迟998ms 速度n/a
+    - name: "韩国1"
+      type: ss
+      server: "121.46.230.138"
+      port: 65443
+      cipher: "aes-256-cfb"
+      password: "7eadc6dbe2ae"
+    # ss 118.107.222.231:65443 延迟388ms 速度0.01MB/s
     - name: "马来西亚1"
       type: ss
       server: "118.107.222.231"
@@ -775,25 +475,23 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - 香港
-      - 日本
-      - 德国
-      - 新加坡
-      - 法国
-      - 美国
       - 中国
       - 哥伦比亚
-      - 英国
-      - 伊朗
-      - 加拿大
+      - 德国
+      - 美国
       - 荷兰
-      - 韩国
-      - 俄罗斯
-      - 台湾
+      - 香港
+      - 伊朗
+      - 日本
+      - 英国
+      - 加拿大
       - 巴西
-      - 意大利
+      - 新加坡
+      - 格鲁吉亚
+      - 法国
       - 泰国
       - 越南
+      - 韩国
       - 马来西亚
   - name: ♻️ 自动选择
     type: url-test
@@ -801,181 +499,71 @@ proxy-groups:
     interval: 300
     tolerance: 100
     proxies:
-      - 香港1
-      - 香港2
-      - 香港3
-      - 香港4
-      - 香港5
-      - 香港6
-      - 香港7
-      - 香港8
-      - 香港9
-      - 香港10
-      - 香港11
-      - 香港12
-      - 香港13
-      - 香港14
-      - 香港15
-      - 香港16
-      - 香港17
-      - 日本1
-      - 日本2
-      - 日本3
-      - 日本4
-      - 日本5
-      - 日本6
-      - 日本7
-      - 日本8
-      - 日本9
-      - 日本10
-      - 日本11
-      - 日本12
-      - 日本13
-      - ⚡德国1
-      - 德国2
-      - 德国3
-      - 德国4
-      - 德国5
-      - 德国6
-      - 德国7
-      - 德国8
-      - 德国9
-      - 德国10
-      - 新加坡1
-      - 新加坡2
-      - 新加坡3
-      - 新加坡4
-      - 新加坡5
-      - 新加坡6
-      - 新加坡7
-      - 新加坡8
-      - 新加坡9
-      - 法国1
-      - 法国2
-      - 法国3
-      - 法国4
-      - 法国5
-      - 法国6
-      - 法国7
-      - 法国8
-      - 美国1
-      - 美国2
-      - 美国3
-      - 美国4
-      - 美国5
-      - 美国6
-      - 美国7
-      - 美国8
       - 中国1
       - 中国2
       - 中国3
       - 中国4
+      - 中国5
+      - 中国6
+      - 中国7
+      - 中国8
+      - 中国9
+      - 中国10
+      - 中国11
+      - 中国12
+      - 中国13
+      - 中国14
+      - 中国15
+      - 中国16
+      - 中国17
+      - 中国18
+      - 中国19
+      - 中国20
+      - 中国21
+      - 中国22
+      - 中国23
+      - 中国24
+      - 中国25
+      - 中国26
+      - 中国27
+      - 中国28
+      - 中国29
+      - 中国30
+      - 中国31
+      - 中国32
       - 哥伦比亚1
       - 哥伦比亚2
       - 哥伦比亚3
       - 哥伦比亚4
-      - 英国1
-      - 英国2
-      - 英国3
-      - 英国4
-      - 伊朗1
-      - 伊朗2
-      - 加拿大1
-      - 加拿大2
-      - 荷兰1
-      - 荷兰2
-      - 韩国1
-      - 韩国2
-      - 俄罗斯1
-      - 台湾1
-      - 巴西1
-      - 意大利1
-      - 泰国1
-      - 越南1
-      - 马来西亚1
-  - name: 香港
-    type: select
-    proxies:
-      - 香港1
-      - 香港2
-      - 香港3
-      - 香港4
-      - 香港5
-      - 香港6
-      - 香港7
-      - 香港8
-      - 香港9
-      - 香港10
-      - 香港11
-      - 香港12
-      - 香港13
-      - 香港14
-      - 香港15
-      - 香港16
-      - 香港17
-  - name: 日本
-    type: select
-    proxies:
-      - 日本1
-      - 日本2
-      - 日本3
-      - 日本4
-      - 日本5
-      - 日本6
-      - 日本7
-      - 日本8
-      - 日本9
-      - 日本10
-      - 日本11
-      - 日本12
-      - 日本13
-  - name: 德国
-    type: select
-    proxies:
-      - ⚡德国1
+      - 德国1
       - 德国2
       - 德国3
       - 德国4
-      - 德国5
-      - 德国6
-      - 德国7
-      - 德国8
-      - 德国9
-      - 德国10
-  - name: 新加坡
-    type: select
-    proxies:
-      - 新加坡1
-      - 新加坡2
-      - 新加坡3
-      - 新加坡4
-      - 新加坡5
-      - 新加坡6
-      - 新加坡7
-      - 新加坡8
-      - 新加坡9
-  - name: 法国
-    type: select
-    proxies:
-      - 法国1
-      - 法国2
-      - 法国3
-      - 法国4
-      - 法国5
-      - 法国6
-      - 法国7
-      - 法国8
-  - name: 美国
-    type: select
-    proxies:
       - 美国1
       - 美国2
       - 美国3
       - 美国4
-      - 美国5
-      - 美国6
-      - 美国7
-      - 美国8
+      - 荷兰1
+      - 荷兰2
+      - 荷兰3
+      - 香港1
+      - 香港2
+      - 香港3
+      - 伊朗1
+      - 伊朗2
+      - 日本1
+      - 日本2
+      - 英国1
+      - 英国2
+      - 加拿大1
+      - 巴西1
+      - 新加坡1
+      - 格鲁吉亚1
+      - 法国1
+      - 泰国1
+      - 越南1
+      - 韩国1
+      - 马来西亚1
   - name: 中国
     type: select
     proxies:
@@ -983,6 +571,34 @@ proxy-groups:
       - 中国2
       - 中国3
       - 中国4
+      - 中国5
+      - 中国6
+      - 中国7
+      - 中国8
+      - 中国9
+      - 中国10
+      - 中国11
+      - 中国12
+      - 中国13
+      - 中国14
+      - 中国15
+      - 中国16
+      - 中国17
+      - 中国18
+      - 中国19
+      - 中国20
+      - 中国21
+      - 中国22
+      - 中国23
+      - 中国24
+      - 中国25
+      - 中国26
+      - 中国27
+      - 中国28
+      - 中国29
+      - 中国30
+      - 中国31
+      - 中国32
   - name: 哥伦比亚
     type: select
     proxies:
@@ -990,49 +606,67 @@ proxy-groups:
       - 哥伦比亚2
       - 哥伦比亚3
       - 哥伦比亚4
-  - name: 英国
+  - name: 德国
     type: select
     proxies:
-      - 英国1
-      - 英国2
-      - 英国3
-      - 英国4
-  - name: 伊朗
+      - 德国1
+      - 德国2
+      - 德国3
+      - 德国4
+  - name: 美国
     type: select
     proxies:
-      - 伊朗1
-      - 伊朗2
-  - name: 加拿大
-    type: select
-    proxies:
-      - 加拿大1
-      - 加拿大2
+      - 美国1
+      - 美国2
+      - 美国3
+      - 美国4
   - name: 荷兰
     type: select
     proxies:
       - 荷兰1
       - 荷兰2
-  - name: 韩国
+      - 荷兰3
+  - name: 香港
     type: select
     proxies:
-      - 韩国1
-      - 韩国2
-  - name: 俄罗斯
+      - 香港1
+      - 香港2
+      - 香港3
+  - name: 伊朗
     type: select
     proxies:
-      - 俄罗斯1
-  - name: 台湾
+      - 伊朗1
+      - 伊朗2
+  - name: 日本
     type: select
     proxies:
-      - 台湾1
+      - 日本1
+      - 日本2
+  - name: 英国
+    type: select
+    proxies:
+      - 英国1
+      - 英国2
+  - name: 加拿大
+    type: select
+    proxies:
+      - 加拿大1
   - name: 巴西
     type: select
     proxies:
       - 巴西1
-  - name: 意大利
+  - name: 新加坡
     type: select
     proxies:
-      - 意大利1
+      - 新加坡1
+  - name: 格鲁吉亚
+    type: select
+    proxies:
+      - 格鲁吉亚1
+  - name: 法国
+    type: select
+    proxies:
+      - 法国1
   - name: 泰国
     type: select
     proxies:
@@ -1041,6 +675,10 @@ proxy-groups:
     type: select
     proxies:
       - 越南1
+  - name: 韩国
+    type: select
+    proxies:
+      - 韩国1
   - name: 马来西亚
     type: select
     proxies:

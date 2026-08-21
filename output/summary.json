@@ -1,141 +1,159 @@
 {
-  "total_dedup_nodes": 20529,
-  "tcp_ok": 7950,
-  "protocol_alive": 101,
-  "verified_alive": 92,
-  "speed_ok": 10,
+  "total_dedup_nodes": 20789,
+  "tcp_ok": 8016,
+  "protocol_alive": 113,
+  "verified_alive": 65,
+  "speed_ok": 12,
   "top_by_speed": [
     {
-      "name": "\\U0001F7E0\\U0001F1E9\\U0001F1EA[\\U0001F3AC\\U0001F916\\U0001F4FA\\U0001F3AD]_github.com/Ruk1ng001_9613cffe",
-      "type": "hysteria2",
-      "server": "player.wwwinternetvideo.click",
-      "port": 443,
-      "delay_ms": 407,
-      "speed_mbps": 0.76,
-      "sub": "Ruk1ng001-clash.yaml"
-    },
-    {
-      "name": "EPODONIOS",
+      "name": "th|55f8|puddincat07@Telegram",
       "type": "ss",
-      "server": "49.254.204.133",
-      "port": 1774,
-      "delay_ms": 499,
-      "speed_mbps": 0.02,
-      "sub": "Epodonios-all-configs"
-    },
-    {
-      "name": "\\U0001F7E2\\U0001F1ED\\U0001F1F0[\\U0001F3AC\\U0001F9E0\\U0001F4FA\\U0001F3AD]_github.com/Ruk1ng001_d94b486e",
-      "type": "ssr",
-      "server": "qcg8fhp6y6v9wn.cache872671.com",
-      "port": 1302,
-      "delay_ms": 397,
-      "speed_mbps": 0.01,
-      "sub": "Ruk1ng001-clash.yaml"
-    },
-    {
-      "name": "\\U0001F7E0\\U0001F1EF\\U0001F1F5[\\U0001F3AC\\U0001F916\\U0001F4FA\\U0001F3AD]_github.com/Ruk1ng001_68ae36b0",
-      "type": "ss",
-      "server": "e1acw359hdvf.cdn000.com",
-      "port": 31201,
-      "delay_ms": 493,
-      "speed_mbps": 0.01,
-      "sub": "Ruk1ng001-clash.yaml"
-    },
-    {
-      "name": "\\U0001F7E2\\U0001F1ED\\U0001F1F0[\\U0001F3AC\\U0001F916\\U0001F4FA\\U0001F3AD]_github.com/Ruk1ng001_f1758ad9",
-      "type": "ssr",
-      "server": "5zkpq9sentjnah.cache872671.com",
-      "port": 1322,
-      "delay_ms": 494,
-      "speed_mbps": 0.01,
-      "sub": "Ruk1ng001-clash.yaml"
-    },
-    {
-      "name": "\\U0001F7E0\\U0001F1ED\\U0001F1F0[\\U0001F3AC\\U0001F916\\U0001F4FA\\U0001F3AD]_github.com/Ruk1ng001_e18678f3",
-      "type": "ssr",
-      "server": "4vnx5kqwk8mxsr.cache872671.com",
-      "port": 1320,
-      "delay_ms": 494,
-      "speed_mbps": 0.01,
-      "sub": "Ruk1ng001-clash.yaml"
-    },
-    {
-      "name": "\\U0001F7E0\\U0001F1F0\\U0001F1F7[\\U0001F3AC\\U0001F916\\U0001F4FA\\U0001F3AD]_github.com/Ruk1ng001_f9dd3272",
-      "type": "ss",
-      "server": "121.46.230.138",
+      "server": "103.169.67.34",
       "port": 65443,
-      "delay_ms": 496,
-      "speed_mbps": 0.01,
-      "sub": "Ruk1ng001-clash.yaml"
+      "delay_ms": 407,
+      "speed_mbps": 0.02,
+      "sub": "BestClash-proxies.yaml"
     },
     {
-      "name": "\\U0001F7E2\\U0001F1ED\\U0001F1F0[\\U0001F3AC\\U0001F9E0\\U0001F4FA\\U0001F3AD]_github.com/Ruk1ng001_eb59080c",
-      "type": "ssr",
-      "server": "neetb62ecrq2zg.cache872671.com",
-      "port": 1304,
-      "delay_ms": 498,
-      "speed_mbps": 0.01,
-      "sub": "Ruk1ng001-clash.yaml"
-    },
-    {
-      "name": "\\U0001F7E0\\U0001F1ED\\U0001F1F0[\\U0001F3AC\\U0001F9E0\\U0001F4FA\\U0001F3AD]_github.com/Ruk1ng001_35104cda",
+      "name": "shadowsocks-817361615",
       "type": "ss",
       "server": "hk.kexueyun.top",
       "port": 1011,
-      "delay_ms": 306,
-      "speed_mbps": 0.0,
+      "delay_ms": 292,
+      "speed_mbps": 0.01,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "EPODONIOS",
+      "type": "vless",
+      "server": "120.227.1.43",
+      "port": 12528,
+      "delay_ms": 383,
+      "speed_mbps": 0.01,
+      "sub": "Epodonios-all-configs"
+    },
+    {
+      "name": "[OpenRay] 🇨🇳 CN-71",
+      "type": "ss",
+      "server": "211.91.158.26",
+      "port": 21121,
+      "delay_ms": 383,
+      "speed_mbps": 0.01,
+      "sub": "sakha1370-OpenRay"
+    },
+    {
+      "name": "\\U0001F7E0\\U0001F1F2\\U0001F1FE[\\U0001F3AC\\U0001F916\\U0001F4FA\\U0001F3AD]_github.com/Ruk1ng001_d6bba6b3",
+      "type": "ss",
+      "server": "118.107.222.231",
+      "port": 65443,
+      "delay_ms": 388,
+      "speed_mbps": 0.01,
       "sub": "Ruk1ng001-clash.yaml"
     },
     {
-      "name": "\\U0001F7E0\\U0001F1F8\\U0001F1EC[\\U0001F3AC\\U0001F916\\U0001F4FA\\U0001F3AD]_github.com/Ruk1ng001_abe278b8",
+      "name": "[OpenRay] 🇨🇳 CN-72",
       "type": "ss",
-      "server": "161.118.236.226",
-      "port": 56927,
-      "delay_ms": 392,
-      "speed_mbps": 0.0,
-      "sub": "Ruk1ng001-clash.yaml"
+      "server": "211.91.158.26",
+      "port": 21119,
+      "delay_ms": 509,
+      "speed_mbps": 0.01,
+      "sub": "sakha1370-OpenRay"
+    },
+    {
+      "name": "[OpenRay] 🇨🇳 CN-99",
+      "type": "ss",
+      "server": "211.91.158.44",
+      "port": 21121,
+      "delay_ms": 510,
+      "speed_mbps": 0.01,
+      "sub": "sakha1370-OpenRay"
+    },
+    {
+      "name": "[OpenRay] 🇨🇳 CN-92",
+      "type": "ss",
+      "server": "211.91.158.26",
+      "port": 21103,
+      "delay_ms": 526,
+      "speed_mbps": 0.01,
+      "sub": "sakha1370-OpenRay"
+    },
+    {
+      "name": "shadowsocks-768399492",
+      "type": "ss",
+      "server": "211.91.158.44",
+      "port": 21119,
+      "delay_ms": 551,
+      "speed_mbps": 0.01,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "shadowsocks-768399391",
+      "type": "ss",
+      "server": "211.91.158.44",
+      "port": 21110,
+      "delay_ms": 552,
+      "speed_mbps": 0.01,
+      "sub": "Au1rxx-clash-full.yaml"
+    },
+    {
+      "name": "[OpenRay] 🇨🇳 CN-93",
+      "type": "ss",
+      "server": "211.91.158.44",
+      "port": 21103,
+      "delay_ms": 585,
+      "speed_mbps": 0.01,
+      "sub": "sakha1370-OpenRay"
+    },
+    {
+      "name": "shadowsocks-768399443",
+      "type": "ss",
+      "server": "211.91.158.26",
+      "port": 21107,
+      "delay_ms": 593,
+      "speed_mbps": 0.01,
+      "sub": "Au1rxx-clash-full.yaml"
     }
   ],
   "per_sub": {
     "Au1rxx-clash-full.yaml": {
-      "alive": 3,
-      "total": 108
+      "alive": 10,
+      "total": 122
     },
     "Barabama-nodefree": {
       "alive": 0,
       "total": 11
     },
     "BestClash-proxies.yaml": {
-      "alive": 6,
-      "total": 14
+      "alive": 1,
+      "total": 12
     },
     "Epodonios-all-configs": {
-      "alive": 11,
-      "total": 1175
+      "alive": 8,
+      "total": 1148
     },
     "Leon406-subshare-vless": {
-      "alive": 0,
-      "total": 2217
+      "alive": 2,
+      "total": 2245
     },
     "MhdiTaheri-mix": {
       "alive": 0,
-      "total": 43
+      "total": 42
     },
     "NiceVPN-clash.yaml": {
       "alive": 2,
-      "total": 1078
+      "total": 1071
     },
     "Ruk1ng001-clash.yaml": {
-      "alive": 76,
-      "total": 106
-    },
-    "NoMoreWalls-list.yml": {
-      "alive": 1,
-      "total": 7
+      "alive": 59,
+      "total": 93
     },
     "Pawdroid-Free-servers": {
       "alive": 0,
       "total": 5
+    },
+    "NoMoreWalls-list.yml": {
+      "alive": 0,
+      "total": 6
     },
     "SSAggregator-merge.yml": {
       "alive": 0,
@@ -143,11 +161,11 @@
     },
     "SoliSpirit-all-configs": {
       "alive": 0,
-      "total": 204
+      "total": 184
     },
     "airport-tested.yaml": {
       "alive": 0,
-      "total": 152
+      "total": 146
     },
     "anaer-clash.yaml": {
       "alive": 0,
@@ -155,7 +173,7 @@
     },
     "extra-agg-pool--pool-yaml.yaml": {
       "alive": 0,
-      "total": 72
+      "total": 71
     },
     "ermaozi-clash.yml": {
       "alive": 0,
@@ -163,57 +181,49 @@
     },
     "extra-agg-pool--previous-yaml.yaml": {
       "alive": 1,
-      "total": 172
+      "total": 170
     },
     "free18-c.yaml": {
       "alive": 0,
-      "total": 23
+      "total": 156
     },
     "mfbpn-trial.yaml": {
       "alive": 0,
-      "total": 8
+      "total": 5
     },
     "sakha1370-OpenRay": {
-      "alive": 0,
-      "total": 1522
+      "alive": 29,
+      "total": 1497
     },
     "ssrsub-v2ray": {
-      "alive": 1,
-      "total": 1
-    },
-    "vxiaov-clash-provider.yaml": {
-      "alive": 0,
-      "total": 4
-    },
-    "ts-sf-v2": {
       "alive": 1,
       "total": 1
     }
   },
   "per_type": {
-    "5240": {
-      "alive": 9,
-      "total": 5240
+    "152": {
+      "alive": 54,
+      "total": 152
     },
-    "1886": {
-      "alive": 2,
-      "total": 1886
-    },
-    "590": {
-      "alive": 2,
-      "total": 590
-    },
-    "140": {
-      "alive": 47,
-      "total": 140
-    },
-    "21": {
+    "28": {
       "alive": 1,
-      "total": 21
+      "total": 28
     },
-    "73": {
+    "5177": {
+      "alive": 14,
+      "total": 5177
+    },
+    "1874": {
+      "alive": 2,
+      "total": 1874
+    },
+    "709": {
+      "alive": 2,
+      "total": 709
+    },
+    "76": {
       "alive": 40,
-      "total": 73
+      "total": 76
     }
   }
 }
