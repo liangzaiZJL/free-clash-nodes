@@ -343,7 +343,9 @@ def build_clash_yaml(nodes):
     all_names = []
     for c, members in order:
         for seq, n in enumerate(members, 1):
-            name = f"{c}{seq}"
+            sp = n.get("speed_mbps")
+            tag = "⚡" if (sp is not None and sp >= 0.10) else ""
+            name = f"{tag}{c}{seq}"
             nn = dict(n)
             nn["name"] = name
             blk = dump_proxy(nn)
@@ -366,7 +368,8 @@ def build_clash_yaml(nodes):
               "    interval: 300", "    tolerance: 100", "    proxies:"]
     lines += ["      - " + "\n      - ".join(all_names)]
     for c, members in order:
-        names = [f"{c}{seq}" for seq in range(1, len(members) + 1)]
+        names = [f"{'⚡' if (m.get('speed_mbps') is not None and m.get('speed_mbps') >= 0.10) else ''}{c}{seq}"
+                 for seq, m in enumerate(members, 1)]
         lines += [f"  - name: {c}", "    type: select", "    proxies:",
                   "      - " + "\n      - ".join(names)]
     lines += ["", "rules:", "  - MATCH,🚀 手动选择", ""]
