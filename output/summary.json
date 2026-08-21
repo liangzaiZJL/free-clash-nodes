@@ -183,6 +183,10 @@
     },
     "vxiaov-clash-provider.yaml": {
       "alive": 0,
+      "total": 4
+    },
+    "ts-sf-v2": {
+      "alive": 1,
       "total": 1
     }
   },

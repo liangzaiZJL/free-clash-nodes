@@ -391,7 +391,48 @@ proxies:
       type: trojan
       server: "103.9.77.6"
       port: 443
-      password: "5a92d674-308c-4d95-b283-28383e63a59b"
+      uuid: "fe4ca690-6fd9-4471-9a9f-94528084d180"
+      network: ws
+      tls: true
+      servername: "ssl.fastly.com"
+      ws-opts: {path: "/TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER,TELEGRAM_NUFiLTER?ed=2053", headers: {Host: "pan1.global.ssl.fastly.net"}}
+    # vmess rush-6it6b.teeopp.quest:443 延迟313ms 速度n/a
+    - name: "🏁RELAY-104.21.58.173-0254"
+      type: vmess
+      server: "rush-6it6b.teeopp.quest"
+      port: 443
+      uuid: "03fcc618-b93d-6796-6aed-8a38c975d581"
+      alterId: 0
+      cipher: "auto"
+      network: ws
+      tls: true
+      servername: "rush-6it6b.teeopp.quest"
+      ws-opts: {path: "/", headers: {Host: "rush-6it6b.teeopp.quest"}}
+    # vmess 140.238.2.250:443 延迟314ms 速度n/a
+    - name: "vmess-5259790"
+      type: vmess
+      server: "140.238.2.250"
+      port: 443
+      uuid: "41a7089a-040b-4538-8b8d-010902405bde"
+      alterId: 0
+      cipher: "auto"
+      network: raw
+    # ss 82.38.31.174:443 延迟315ms 速度n/a
+    - name: "shadowsocks-91981760"
+      type: ss
+      server: "82.38.31.174"
+      port: 443
+      cipher: "chacha20-ietf-poly1305"
+      password: "oZIoA69Q8yhcQV8ka3Pa3A"
+    # vmess 43.132.192.16:9527 延迟315ms 速度n/a
+    - name: "澳大利亚 020"
+      type: vmess
+      server: "43.132.192.16"
+      port: 9527
+      uuid: "ae862e1d-3b8c-443a-027b-37c6c69ef43c"
+      alterId: 0
+      cipher: "chacha20-poly1305"
+      network: tcp
       skip-cert-verify: true
     # ssr a83jb3sztjnqd4.cache872671.com:1310 延迟714ms 速度n/a
     - name: "\\U0001F7E2\\U0001F1ED\\U0001F1F0[\\U0001F3A#6"
