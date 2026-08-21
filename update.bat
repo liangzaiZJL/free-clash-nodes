@@ -1,4 +1,4 @@
-@echo off
+﻿@echo off
 chcp 65001 >nul
 setlocal EnableExtensions
 cd /d "%~dp0"
@@ -68,11 +68,17 @@ python gen_outputs.py
 if errorlevel 1 goto :err
 
 echo.
+echo [10/10] 推送到 GitHub...
+call push_to_github.bat
+if errorlevel 1 goto :err
+
+echo.
 echo ============================================
 echo   更新完成!
 echo   - output\best-nodes.yaml   可导入 Clash
 echo   - output\report.md         完整测试报告
-echo   - output\summary.json      结构化数据
+echo   - 已自动推送到 GitHub，其他电脑可拉取:
+echo     https://raw.githubusercontent.com/liangzaiZJL/free-clash-nodes/main/output/best-nodes.yaml
 echo ============================================
 pause
 exit /b 0
