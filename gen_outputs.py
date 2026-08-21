@@ -1,9 +1,7 @@
 # -*- coding: utf-8 -*-
-"""生成最终交付物：best-nodes.yaml（可导入配置）+ report.md（整理报告）。"""
-import io, json, sys
+"""生成最终交付物：best-nodes.yaml（可导入配置，节点按国家命名）+ report.md。"""
+import io, json, re, socket, sys, threading, urllib.request
 from datetime import datetime, timezone, timedelta
-
-sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
 
 def yq(v):
     """YAML 双引号字符串。"""
@@ -127,12 +125,210 @@ def dump_proxy(p):
         return None
     return lines
 
+# ---------------- 国家识别 ----------------
+FLAG_CODES = {
+    "US": "美国", "HK": "香港", "TW": "台湾", "JP": "日本", "KR": "韩国",
+    "SG": "新加坡", "DE": "德国", "FR": "法国", "GB": "英国", "CA": "加拿大",
+    "AU": "澳大利亚", "RU": "俄罗斯", "NL": "荷兰", "IN": "印度", "ID": "印尼",
+    "TH": "泰国", "MY": "马来西亚", "VN": "越南", "IT": "意大利", "ES": "西班牙",
+    "TR": "土耳其", "BR": "巴西", "AE": "阿联酋", "CH": "瑞士", "SE": "瑞典",
+    "NO": "挪威", "FI": "芬兰", "DK": "丹麦", "PL": "波兰", "CZ": "捷克",
+    "UA": "乌克兰", "PH": "菲律宾", "IR": "伊朗", "CN": "中国", "MO": "澳门",
+    "NZ": "新西兰", "ZA": "南非", "AR": "阿根廷", "MX": "墨西哥", "BE": "比利时",
+    "AT": "奥地利", "PT": "葡萄牙", "GR": "希腊", "IL": "以色列", "EE": "爱沙尼亚",
+    "LV": "拉脱维亚", "LT": "立陶宛", "RO": "罗马尼亚", "BG": "保加利亚", "HU": "匈牙利",
+    "KZ": "哈萨克斯坦", "AZ": "阿塞拜疆", "GE": "格鲁吉亚", "IS": "冰岛", "IE": "爱尔兰",
+    "LU": "卢森堡", "HR": "克罗地亚", "RS": "塞尔维亚", "SI": "斯洛文尼亚", "SK": "斯洛伐克",
+    "CO": "哥伦比亚", "EG": "埃及", "SA": "沙特", "PK": "巴基斯坦", "BD": "孟加拉",
+    "NG": "尼日利亚", "IQ": "伊拉克", "QA": "卡塔尔", "KW": "科威特", "OM": "阿曼",
+    "CL": "智利", "PE": "秘鲁", "UY": "乌拉圭", "EC": "厄瓜多尔", "CR": "哥斯达黎加",
+    "PA": "巴拿马", "DO": "多米尼加", "GT": "危地马拉", "BO": "玻利维亚", "PY": "巴拉圭",
+    "VE": "委内瑞拉", "CU": "古巴", "SY": "叙利亚", "LB": "黎巴嫩", "JO": "约旦",
+    "YE": "也门", "MN": "蒙古", "NP": "尼泊尔", "LK": "斯里兰卡", "MM": "缅甸",
+    "KH": "柬埔寨", "LA": "老挝", "BN": "文莱", "TL": "东帝汶", "FJ": "斐济",
+    "CY": "塞浦路斯", "MT": "马耳他", "MD": "摩尔多瓦", "BY": "白俄罗斯", "AM": "亚美尼亚",
+    "KE": "肯尼亚", "ET": "埃塞俄比亚", "GH": "加纳", "MA": "摩洛哥", "TN": "突尼斯",
+    "DZ": "阿尔及利亚", "UZ": "乌兹别克斯坦", "TJ": "塔吉克斯坦", "KG": "吉尔吉斯斯坦", "TM": "土库曼斯坦",
+}
+KEYWORD_RULES = [
+    ("美国", ["美国", "美利坚", "united states", "unitedstates", "usa", "us", "洛杉矶", "纽约", "硅谷", "圣何塞", "西雅图", "芝加哥"]),
+    ("香港", ["香港", "hong kong", "hongkong", "hk"]),
+    ("台湾", ["台湾", "taiwan", "tw"]),
+    ("日本", ["日本", "japan", "jp", "东京", "大阪", "softbank"]),
+    ("韩国", ["韩国", "korea", "kr", "首尔"]),
+    ("新加坡", ["新加坡", "singapore", "sg"]),
+    ("德国", ["德国", "germany", "de", "法兰克福", "frankfurt"]),
+    ("英国", ["英国", "england", "united kingdom", "uk", "伦敦", "london"]),
+    ("法国", ["法国", "france", "fr", "巴黎", "paris"]),
+    ("加拿大", ["加拿大", "canada", "ca", "多伦多", "温哥华"]),
+    ("澳大利亚", ["澳大利亚", "australia", "au", "悉尼", "sydney"]),
+    ("俄罗斯", ["俄罗斯", "russia", "ru", "莫斯科"]),
+    ("荷兰", ["荷兰", "netherlands", "nl"]),
+    ("印度", ["印度", "india", "in"]),
+    ("印尼", ["印尼", "indonesia", "id"]),
+    ("泰国", ["泰国", "thailand", "th"]),
+    ("马来西亚", ["马来西亚", "malaysia", "my"]),
+    ("越南", ["越南", "vietnam", "vn"]),
+    ("意大利", ["意大利", "italy", "it"]),
+    ("西班牙", ["西班牙", "spain", "es"]),
+    ("土耳其", ["土耳其", "turkey", "tr"]),
+    ("巴西", ["巴西", "brazil", "br"]),
+    ("中国", ["中国", "china", "cn", "国内", "上海", "广州", "北京"]),
+    ("澳门", ["澳门", "macau", "mo"]),
+    ("菲律宾", ["菲律宾", "philippines", "ph"]),
+    ("伊朗", ["伊朗", "iran", "ir"]),
+]
+
+def decode_escapes(name):
+    """解码名字里的字面 \\U0001Fxxx / \\uXXXX 转义序列（还原 emoji 国旗）。"""
+    if "\\U" in name or "\\u" in name:
+        try:
+            return name.encode("utf-8").decode("unicode_escape", errors="replace")
+        except Exception:
+            return name
+    return name
+
+def flag_to_country(name):
+    cps = [ord(ch) for ch in name]
+    for i in range(len(cps) - 1):
+        if 0x1F1E6 <= cps[i] <= 0x1F1FF and 0x1F1E6 <= cps[i + 1] <= 0x1F1FF:
+            a = chr(cps[i] - 0x1F1E6 + ord("A"))
+            b = chr(cps[i + 1] - 0x1F1E6 + ord("A"))
+            cc = a + b
+            return FLAG_CODES.get(cc, cc)
+    return None
+
+def country_from_text(text):
+    if not text:
+        return None
+    low = text.lower()
+    for country, kws in KEYWORD_RULES:
+        for kw in kws:
+            if len(kw) <= 3 and kw.isalpha():
+                # 短代码（us/uk/jp...）要求词边界，避免 "Ruk1ng001" 里的 "uk" 误匹配
+                if re.search(r"(?<![a-z0-9])" + re.escape(kw) + r"(?![a-z0-9])", low):
+                    return country
+            elif kw in low:
+                return country
+    return None
+
+def detect_country(node):
+    """国旗 emoji -> 关键词 -> IP 地理位置（由调用方做 IP 批量查询）。"""
+    name = decode_escapes(node.get("name", ""))
+    server = node.get("server", "")
+    c = flag_to_country(name)
+    if c:
+        return c
+    c = country_from_text(name + " " + server)
+    if c:
+        return c
+    return None
+
+def ip_countries(ip_list):
+    """批量查询 IP 归属国（ip-api.com 免费批量接口；失败返回空 dict）。"""
+    if not ip_list:
+        return {}
+    result = {}
+    try:
+        req = urllib.request.Request(
+            "http://ip-api.com/batch",
+            data=json.dumps([{"query": ip} for ip in ip_list]).encode(),
+            headers={"Content-Type": "application/json"},
+        )
+        with urllib.request.urlopen(req, timeout=12) as r:
+            data = json.loads(r.read().decode())
+        for item in data:
+            if item.get("status") == "success" and item.get("query"):
+                cc = item.get("countryCode", "")
+                if cc:
+                    result[item["query"]] = FLAG_CODES.get(cc, cc)
+    except Exception:
+        pass
+    return result
+
+def resolve_ip(host):
+    """线程内解析域名（3 秒超时），失败返回 None。"""
+    box = {}
+
+    def run():
+        try:
+            box["ip"] = socket.gethostbyname(host)
+        except Exception:
+            box["ip"] = None
+    t = threading.Thread(target=run, daemon=True)
+    t.start()
+    t.join(timeout=3)
+    return box.get("ip")
+
+IP_RE = re.compile(r"^\d{1,3}(\.\d{1,3}){3}$")
+
+def assign_countries(nodes):
+    """给节点赋 country（可缓存复用）。返回 {index: 国家}。"""
+    import os as _os
+    cache = {}
+    if _os.path.exists("nodes/country_cache.json"):
+        try:
+            with open("nodes/country_cache.json", encoding="utf-8") as f:
+                cache = json.load(f)
+        except Exception:
+            pass
+    result = {}
+    pending = []
+    for i, n in enumerate(nodes):
+        c = detect_country(n)
+        if c:
+            result[i] = c
+            continue
+        server = n.get("server", "")
+        if server in cache:
+            result[i] = cache[server] or "未知"
+            continue
+        pending.append((i, n, server))
+    # 批量 IP 查询
+    ip_map = {}
+    for i, n, server in pending:
+        ip = server if IP_RE.match(server or "") else resolve_ip(server)
+        if ip:
+            ip_map.setdefault(ip, []).append((i, server))
+    if ip_map:
+        lookup = ip_countries(list(ip_map.keys()))
+        for ip, items in ip_map.items():
+            cc = lookup.get(ip, "未知")
+            for i, server in items:
+                result[i] = cc
+                cache[server] = cc
+    for i, n, server in pending:
+        if i not in result:
+            result[i] = "未知"
+            cache[server] = "未知"
+    try:
+        with open("nodes/country_cache.json", "w", encoding="utf-8") as f:
+            json.dump(cache, f, ensure_ascii=False)
+    except Exception:
+        pass
+    return result
+
 def build_clash_yaml(nodes):
-    """生成含全部已验证节点的可导入 Clash 配置。"""
+    """生成按国家分组的可导入 Clash 配置，节点命名: 美国1 / 美国2 ..."""
+    import time as _time
+    _t0 = _time.time()
+    country = assign_countries(nodes)
+    print(f"  country detection: {_time.time()-_t0:.1f}s", flush=True)
+
+    # 分组：国家 -> [节点]，组内按 速度降序、延迟升序
+    groups = {}
+    for i, n in enumerate(nodes):
+        groups.setdefault(country[i], []).append(n)
+    for c in groups:
+        groups[c].sort(key=lambda x: (x.get("speed_mbps") is None,
+                                      -(x.get("speed_mbps") or 0),
+                                      x.get("delay2_ms") or 99999))
+    order = sorted(groups.items(), key=lambda kv: (-len(kv[1]), kv[0] == "未知", kv[0]))
+
     lines = [
         "# ====================================================",
-        "# 免费节点已验证配置 (2026-08-21 测试)",
-        "# 测试: TCP连通 -> mihomo协议延迟x2 -> 8MB真实下载测速",
+        "# 免费节点已验证配置 (按国家分组命名)",
+        "# 测试: TCP连通 -> mihomo协议延迟x2 -> 真实下载测速",
         "# 说明: 免费节点随时可能失效，请定期重新测试",
         "# ====================================================",
         "mixed-port: 7890",
@@ -143,59 +339,41 @@ def build_clash_yaml(nodes):
         "external-controller: 127.0.0.1:9090",
         "proxies:",
     ]
-    used = {}
-    fast_names = []
-    for n in nodes:
-        sp = n.get("speed_mbps")
-        tag = "⚡" if (sp is not None and sp >= 0.10) else ""
-        base = (n.get("name") or f"{n['type']}-{n['server']}")[:40]
-        if base in used:
-            used[base] += 1
-            base = f"{base}#{used[base]}"
-        else:
-            used[base] = 1
-        name = tag + base
-        nn = dict(n)
-        nn["name"] = name
-        blk = dump_proxy(nn)
-        if blk is None:
-            continue
-        sp_s = f"{sp:.2f}MB/s" if sp is not None else "n/a"
-        lines.append(f"    # {n['type']} {n['server']}:{n['port']} 延迟{n['delay2_ms']}ms 速度{sp_s}")
-        lines.append("\n".join(blk))
-        if tag:
-            fast_names.append(name)
-    group_members = "    - " + "\n    - ".join(fast_names) if fast_names else ""
-    lines += [
-        "",
-        "proxy-groups:",
-        "  - name: 🚀 手动选择",
-        "    type: select",
-        "    proxies:",
-        "      - ♻️ 自动选择",
-        "      - DIRECT",
-    ]
-    if fast_names:
-        lines += ["      - " + "\n      - ".join(fast_names)]
-    lines += [
-        "  - name: ♻️ 自动选择",
-        "    type: url-test",
-        "    url: http://www.gstatic.com/generate_204",
-        "    interval: 300",
-        "    tolerance: 100",
-    ]
-    if fast_names:
-        lines += ["    proxies:"]
-        lines += ["      - " + "\n      - ".join(fast_names)]
-    lines += [
-        "",
-        "rules:",
-        "  - MATCH,🚀 手动选择",
-        "",
-    ]
+    name2country = {}
+    all_names = []
+    for c, members in order:
+        for seq, n in enumerate(members, 1):
+            name = f"{c}{seq}"
+            nn = dict(n)
+            nn["name"] = name
+            blk = dump_proxy(nn)
+            if blk is None:
+                continue
+            sp_s = f"{n.get('speed_mbps') or 0:.2f}MB/s" if n.get("speed_mbps") is not None else "n/a"
+            lines.append(f"    # {n['type']} {n['server']}:{n['port']} 延迟{n.get('delay2_ms')}ms 速度{sp_s}")
+            lines.append("\n".join(blk))
+            name2country[name] = c
+            all_names.append(name)
+
+    # proxy-groups：每国家一组 + 手动/自动
+    lines += ["", "proxy-groups:"]
+    lines += ["  - name: 🚀 手动选择", "    type: select", "    proxies:",
+              "      - ♻️ 自动选择", "      - DIRECT"]
+    for c, members in order:
+        lines.append(f"      - {c}")
+    lines += ["  - name: ♻️ 自动选择", "    type: url-test",
+              "    url: http://www.gstatic.com/generate_204",
+              "    interval: 300", "    tolerance: 100", "    proxies:"]
+    lines += ["      - " + "\n      - ".join(all_names)]
+    for c, members in order:
+        names = [f"{c}{seq}" for seq in range(1, len(members) + 1)]
+        lines += [f"  - name: {c}", "    type: select", "    proxies:",
+                  "      - " + "\n      - ".join(names)]
+    lines += ["", "rules:", "  - MATCH,🚀 手动选择", ""]
     return "\n".join(lines)
 
 def main():
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="replace")
     import os as _os
     _os.makedirs("output", exist_ok=True)
     final = json.load(open("nodes/final_nodes.json", encoding="utf-8"))

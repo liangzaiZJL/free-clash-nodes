@@ -1,6 +1,6 @@
 # 免费 Clash 节点订阅收集与测试报告
 
-> 生成时间: 2026-08-21 12:25 (UTC+8) | 测试环境: Windows 11 + Python 3.12 + mihomo v1.19.30
+> 生成时间: 2026-08-21 12:46 (UTC+8) | 测试环境: Windows 11 + Python 3.12 + mihomo v1.19.30
 
 ## 一、总体结果
 
@@ -26,6 +26,7 @@
 | NoMoreWalls-list.yml | 7 | 1 | 14% | ⚠️ 一般 |
 | extra-agg-pool--previous-yaml.yaml | 172 | 1 | 0% | ⚠️ 一般 |
 | ssrsub-v2ray | 1 | 1 | 100% | ✅ 推荐 |
+| ts-sf-v2 | 1 | 1 | 100% | ✅ 推荐 |
 | Barabama-nodefree | 11 | 0 | 0% | ❌ 基本不可用 |
 | Leon406-subshare-vless | 2217 | 0 | 0% | ❌ 基本不可用 |
 | MhdiTaheri-mix | 43 | 0 | 0% | ❌ 基本不可用 |
@@ -39,12 +40,13 @@
 | free18-c.yaml | 23 | 0 | 0% | ❌ 基本不可用 |
 | mfbpn-trial.yaml | 8 | 0 | 0% | ❌ 基本不可用 |
 | sakha1370-OpenRay | 1522 | 0 | 0% | ❌ 基本不可用 |
-| vxiaov-clash-provider.yaml | 1 | 0 | 0% | ❌ 基本不可用 |
+| vxiaov-clash-provider.yaml | 4 | 0 | 0% | ❌ 基本不可用 |
 
 **最推荐订阅（实测可用率最高）：**
 
 - `https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml`
 - `https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray`
+- `https://raw.githubusercontent.com/ts-sf/fly/main/v2`
 
 ## 三、协议类型可用率
 
