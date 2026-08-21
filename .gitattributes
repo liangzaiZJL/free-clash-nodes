@@ -1,0 +1,5 @@
+# bat 必须 CRLF 换行（cmd 不认 LF），BOM 保证中文不乱码
+*.bat text eol=crlf
+
+# Python 用 LF
+*.py text eol=lf
