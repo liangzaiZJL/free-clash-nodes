@@ -88,6 +88,15 @@ python gen_outputs.py   # → output/report.md + output/best-nodes.yaml
 3. 更新后的订阅可直接用 raw 链接导入 Clash：
    `https://raw.githubusercontent.com/<你的用户名>/free-clash-nodes/main/output/best-nodes.yaml`
 
+## 优化点（v2）
+
+- **源质量反馈闭环**：自动记录每个订阅源的存活率，连续 2 次 0 产出的源自动跳过测试（每 3 次全量测一次以便恢复），省时且结果更干净
+- **订阅内容缓存**：订阅文件 hash 未变且缓存 ≤2 天时，直接复用上次的 TCP/延迟结果，不重复测试
+- **并行下载**：30+ 个订阅源并行抓取，从几分钟缩到 ~8 秒
+- **源加权排序**：优质源的节点优先测，中途 Ctrl-C 也能拿到好结果
+- **TG 频道翻页抓取**：`fetch_extra.py` 支持一次翻 3 页抓取 t.me 公开预览
+- **新增 10 个高质量源**（freefq / ssrsub / SubCrawler / Epodonios / SoliSpirit / OpenRay 等），实测协议可用节点从 70 → 101
+
 ## 免责声明
 
 免费节点随时可能失效，请定期自测；节点来自第三方公开仓库，不保证安全性，请勿传输敏感信息，风险自负；请遵守当地法律法规。

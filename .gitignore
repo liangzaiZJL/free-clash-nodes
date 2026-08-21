@@ -9,5 +9,6 @@ qa/
 sources_raw.json
 subs_manifest.json
 extra_manifest.json
+source_stats.json
 
 # 保留 output/（每日更新的结果，提交回仓库）

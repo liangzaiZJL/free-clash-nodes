@@ -10,369 +10,91 @@ log-level: info
 ipv6: false
 external-controller: 127.0.0.1:9090
 proxies:
-    # hysteria2 45.32.252.144:443 延迟407ms 速度0.76MB/s
-    - name: "⚡hysteria2-755770771"
-      type: hysteria2
-      server: "45.32.252.144"
-      port: 443
-      password: "1e3a5c5fde1da9dd1358b4adeb0c4ca1"
-      sni: "vps.vpsv.cc"
-    # hysteria2 66.94.121.46:443 延迟510ms 速度0.36MB/s
-    - name: "⚡hysteria2-468883194"
-      type: hysteria2
-      server: "66.94.121.46"
-      port: 443
-      password: "gf1:gfhysteria2024"
-      sni: "www.broadcom.com"
-      skip-cert-verify: true
-    # hysteria2 player.wwwinternetvideo.click:443 延迟388ms 速度0.24MB/s
-    - name: "⚡hysteria2-738907388"
+    # hysteria2 player.wwwinternetvideo.click:443 延迟407ms 速度0.76MB/s
+    - name: "⚡\\U0001F7E0\\U0001F1E9\\U0001F1EA[\\U0001F3A"
       type: hysteria2
       server: "player.wwwinternetvideo.click"
       port: 443
       password: "V1UQuwa-4PRIDW2paxrPe58RcxXHPGyFIGS-5QojaM8"
       sni: "player.wwwinternetvideo.click"
       skip-cert-verify: true
-    # hysteria2 starlink-ft.251313.xyz:443 延迟407ms 速度0.14MB/s
-    - name: "⚡hysteria2-299162412"
-      type: hysteria2
-      server: "starlink-ft.251313.xyz"
-      port: 443
-      password: "https://xship.2fa.cat"
-      sni: "xship.top"
-      skip-cert-verify: true
-    # vless 120.227.1.43:12528 延迟282ms 速度0.01MB/s
-    - name: "\\U0001F534\\U0001F1E8\\U0001F1F3[\\U0001F39"
-      type: vless
-      server: "120.227.1.43"
-      port: 12528
-      uuid: "f0169b08-43fd-4dc3-8195-18f6ad2fe39d"
-      network: tcp
-    # hysteria2 fast.wwwinternetvideo.click:443 延迟305ms 速度0.01MB/s
-    - name: "hysteria2-647019506"
-      type: hysteria2
-      server: "fast.wwwinternetvideo.click"
-      port: 443
-      password: "C91FbOXGY9XRymrcEebtax9R1Nj62UizoT8S6kCb7xwey8IE"
-      sni: "fast.wwwinternetvideo.click"
-      skip-cert-verify: true
-    # ss 211.91.158.44:21110 延迟406ms 速度0.01MB/s
-    - name: "shadowsocks-768399391"
+    # ss 49.254.204.133:1774 延迟499ms 速度0.02MB/s
+    - name: "EPODONIOS"
       type: ss
-      server: "211.91.158.44"
-      port: 21110
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 211.91.158.26:21103 延迟497ms 速度0.01MB/s
-    - name: "shadowsocks-768399395"
-      type: ss
-      server: "211.91.158.26"
-      port: 21103
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 211.91.158.26:21121 延迟509ms 速度0.01MB/s
-    - name: "shadowsocks-768399485"
-      type: ss
-      server: "211.91.158.26"
-      port: 21121
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 211.91.158.26:21119 延迟509ms 速度0.01MB/s
-    - name: "shadowsocks-768399425"
-      type: ss
-      server: "211.91.158.26"
-      port: 21119
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 211.91.158.26:21109 延迟510ms 速度0.01MB/s
-    - name: "shadowsocks-768399465"
-      type: ss
-      server: "211.91.158.26"
-      port: 21109
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 211.91.158.44:21119 延迟510ms 速度0.01MB/s
-    - name: "shadowsocks-768399492"
-      type: ss
-      server: "211.91.158.44"
-      port: 21119
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 211.91.158.44:21121 延迟510ms 速度0.01MB/s
-    - name: "shadowsocks-768399336"
-      type: ss
-      server: "211.91.158.44"
-      port: 21121
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 211.91.158.26:21125 延迟510ms 速度0.01MB/s
-    - name: "shadowsocks-768399453"
-      type: ss
-      server: "211.91.158.26"
-      port: 21125
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 211.91.158.44:21109 延迟510ms 速度0.01MB/s
-    - name: "shadowsocks-768399334"
-      type: ss
-      server: "211.91.158.44"
-      port: 21109
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 63.181.36.211:443 延迟594ms 速度0.01MB/s
-    - name: "shadowsocks-696791488"
-      type: ss
-      server: "63.181.36.211"
-      port: 443
+      server: "49.254.204.133"
+      port: 1774
       cipher: "aes-256-cfb"
-      password: "amazonskr05"
-    # ss 211.91.158.44:21114 延迟598ms 速度0.01MB/s
-    - name: "shadowsocks-768399408"
+      password: "1234!@#$"
+    # ssr qcg8fhp6y6v9wn.cache872671.com:1302 延迟397ms 速度0.01MB/s
+    - name: "\\U0001F7E2\\U0001F1ED\\U0001F1F0[\\U0001F3A"
+      type: ssr
+      server: "qcg8fhp6y6v9wn.cache872671.com"
+      port: 1302
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ss e1acw359hdvf.cdn000.com:31201 延迟493ms 速度0.01MB/s
+    - name: "\\U0001F7E0\\U0001F1EF\\U0001F1F5[\\U0001F3A"
       type: ss
-      server: "211.91.158.44"
-      port: 21114
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 15.236.226.14:443 延迟599ms 速度0.01MB/s
-    - name: "shadowsocks-743190429"
+      server: "e1acw359hdvf.cdn000.com"
+      port: 31201
+      cipher: "2022-blake3-aes-128-gcm"
+      password: "Y2FkNzhhZWQ0MzA1NzlhZA==:ODNiMjQ4NDMtYTY2Mi00Mg=="
+    # ssr 5zkpq9sentjnah.cache872671.com:1322 延迟494ms 速度0.01MB/s
+    - name: "\\U0001F7E2\\U0001F1ED\\U0001F1F0[\\U0001F3A#2"
+      type: ssr
+      server: "5zkpq9sentjnah.cache872671.com"
+      port: 1322
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ssr 4vnx5kqwk8mxsr.cache872671.com:1320 延迟494ms 速度0.01MB/s
+    - name: "\\U0001F7E0\\U0001F1ED\\U0001F1F0[\\U0001F3A"
+      type: ssr
+      server: "4vnx5kqwk8mxsr.cache872671.com"
+      port: 1320
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ss 121.46.230.138:65443 延迟496ms 速度0.01MB/s
+    - name: "\\U0001F7E0\\U0001F1F0\\U0001F1F7[\\U0001F3A"
       type: ss
-      server: "15.236.226.14"
-      port: 443
-      cipher: "aes-256-cfb"
-      password: "amazonskr05"
-    # ss 211.91.158.44:21107 延迟601ms 速度0.01MB/s
-    - name: "shadowsocks-768399368"
-      type: ss
-      server: "211.91.158.44"
-      port: 21107
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 121.46.230.233:65443 延迟611ms 速度0.01MB/s
-    - name: "shadowsocks-696792820"
-      type: ss
-      server: "121.46.230.233"
+      server: "121.46.230.138"
       port: 65443
       cipher: "aes-256-cfb"
       password: "7eadc6dbe2ae"
-    # ss 211.91.158.26:21107 延迟612ms 速度0.01MB/s
-    - name: "shadowsocks-768399443"
+    # ssr neetb62ecrq2zg.cache872671.com:1304 延迟498ms 速度0.01MB/s
+    - name: "\\U0001F7E2\\U0001F1ED\\U0001F1F0[\\U0001F3A#3"
+      type: ssr
+      server: "neetb62ecrq2zg.cache872671.com"
+      port: 1304
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ss hk.kexueyun.top:1011 延迟306ms 速度0.00MB/s
+    - name: "\\U0001F7E0\\U0001F1ED\\U0001F1F0[\\U0001F3A#2"
       type: ss
-      server: "211.91.158.26"
-      port: 21107
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 211.91.158.44:21103 延迟612ms 速度0.01MB/s
-    - name: "shadowsocks-768399350"
+      server: "hk.kexueyun.top"
+      port: 1011
+      cipher: "2022-blake3-aes-256-gcm"
+      password: "OLII2zRkBbVCfoWY9vuMpe5dWfhq6BlfN9r12fparDw=:XIoUs91l+3EgTnmaCrNNChFBggx74qHudT9sZNyxW/Q="
+    # ss 161.118.236.226:56927 延迟392ms 速度0.00MB/s
+    - name: "\\U0001F7E0\\U0001F1F8\\U0001F1EC[\\U0001F3A"
       type: ss
-      server: "211.91.158.44"
-      port: 21103
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 18.185.179.35:443 延迟612ms 速度0.01MB/s
-    - name: "shadowsocks-696791481"
-      type: ss
-      server: "18.185.179.35"
-      port: 443
-      cipher: "aes-256-cfb"
-      password: "amazonskr05"
-    # ss 211.91.158.44:21123 延迟613ms 速度0.01MB/s
-    - name: "shadowsocks-768399440"
-      type: ss
-      server: "211.91.158.44"
-      port: 21123
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 211.91.158.26:21114 延迟613ms 速度0.01MB/s
-    - name: "shadowsocks-768399358"
-      type: ss
-      server: "211.91.158.26"
-      port: 21114
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 211.91.158.44:21125 延迟613ms 速度0.01MB/s
-    - name: "shadowsocks-768399379"
-      type: ss
-      server: "211.91.158.44"
-      port: 21125
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 121.46.230.139:65443 延迟613ms 速度0.01MB/s
-    - name: "shadowsocks-696792818"
-      type: ss
-      server: "121.46.230.139"
-      port: 65443
-      cipher: "aes-256-cfb"
-      password: "7eadc6dbe2ae"
-    # ss 3.70.135.154:443 延迟613ms 速度0.01MB/s
-    - name: "shadowsocks-743190628"
-      type: ss
-      server: "3.70.135.154"
-      port: 443
-      cipher: "aes-256-cfb"
-      password: "amazonskr05"
-    # ss 211.91.158.44:21126 延迟698ms 速度0.01MB/s
-    - name: "shadowsocks-768399490"
-      type: ss
-      server: "211.91.158.44"
-      port: 21126
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 211.91.158.44:21108 延迟714ms 速度0.01MB/s
-    - name: "shadowsocks-768399372"
-      type: ss
-      server: "211.91.158.44"
-      port: 21108
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 211.91.158.26:21118 延迟714ms 速度0.01MB/s
-    - name: "shadowsocks-768399376"
-      type: ss
-      server: "211.91.158.26"
-      port: 21118
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 211.91.158.44:21118 延迟714ms 速度0.01MB/s
-    - name: "shadowsocks-768399365"
-      type: ss
-      server: "211.91.158.44"
-      port: 21118
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 211.91.158.44:21105 延迟714ms 速度0.01MB/s
-    - name: "shadowsocks-768399411"
-      type: ss
-      server: "211.91.158.44"
-      port: 21105
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 211.91.158.26:21104 延迟715ms 速度0.01MB/s
-    - name: "shadowsocks-768399384"
-      type: ss
-      server: "211.91.158.26"
-      port: 21104
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 211.91.158.26:21117 延迟715ms 速度0.01MB/s
-    - name: "shadowsocks-768399429"
-      type: ss
-      server: "211.91.158.26"
-      port: 21117
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 211.91.158.26:21105 延迟716ms 速度0.01MB/s
-    - name: "shadowsocks-768399400"
-      type: ss
-      server: "211.91.158.26"
-      port: 21105
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 159.89.114.254:443 延迟797ms 速度0.01MB/s
-    - name: "shadowsocks-779606875"
-      type: ss
-      server: "159.89.114.254"
-      port: 443
-      cipher: "aes-256-gcm"
-      password: "jCacZrWkhonLqnvd"
-    # ss 211.91.158.44:21104 延迟816ms 速度0.01MB/s
-    - name: "shadowsocks-768399477"
-      type: ss
-      server: "211.91.158.44"
-      port: 21104
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 118.107.222.231:65443 延迟816ms 速度0.01MB/s
-    - name: "shadowsocks-696792801"
-      type: ss
-      server: "118.107.222.231"
-      port: 65443
-      cipher: "aes-256-cfb"
-      password: "7eadc6dbe2ae"
-    # ss 95.170.13.47:65443 延迟816ms 速度0.01MB/s
-    - name: "shadowsocks-696792833"
-      type: ss
-      server: "95.170.13.47"
-      port: 65443
-      cipher: "aes-256-cfb"
-      password: "7eadc6dbe2ae"
-    # ss 211.91.158.44:21117 延迟816ms 速度0.01MB/s
-    - name: "shadowsocks-768399406"
-      type: ss
-      server: "211.91.158.44"
-      port: 21117
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 211.91.158.44:21122 延迟817ms 速度0.01MB/s
-    - name: "shadowsocks-768399335"
-      type: ss
-      server: "211.91.158.44"
-      port: 21122
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 18.219.210.19:443 延迟817ms 速度0.01MB/s
-    - name: "shadowsocks-717975157"
-      type: ss
-      server: "18.219.210.19"
-      port: 443
-      cipher: "aes-256-cfb"
-      password: "amazonskr05"
-    # ss 211.91.158.44:21113 延迟817ms 速度0.01MB/s
-    - name: "shadowsocks-768399439"
-      type: ss
-      server: "211.91.158.44"
-      port: 21113
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 13.38.78.128:443 延迟818ms 速度0.01MB/s
-    - name: "shadowsocks-743190627"
-      type: ss
-      server: "13.38.78.128"
-      port: 443
-      cipher: "aes-256-cfb"
-      password: "amazonskr05"
-    # ss 211.91.158.26:21113 延迟818ms 速度0.01MB/s
-    - name: "shadowsocks-768399367"
-      type: ss
-      server: "211.91.158.26"
-      port: 21113
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 211.91.158.26:21120 延迟818ms 速度0.01MB/s
-    - name: "shadowsocks-768399361"
-      type: ss
-      server: "211.91.158.26"
-      port: 21120
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 211.91.158.26:21126 延迟818ms 速度0.01MB/s
-    - name: "shadowsocks-768399383"
-      type: ss
-      server: "211.91.158.26"
-      port: 21126
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 211.91.158.26:21116 延迟903ms 速度0.01MB/s
-    - name: "shadowsocks-768399359"
-      type: ss
-      server: "211.91.158.26"
-      port: 21116
-      cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss 103.169.67.34:65443 延迟1023ms 速度0.01MB/s
-    - name: "shadowsocks-696792800"
-      type: ss
-      server: "103.169.67.34"
-      port: 65443
-      cipher: "aes-256-cfb"
-      password: "7eadc6dbe2ae"
-    # ss 121.46.230.232:65443 延迟1124ms 速度0.01MB/s
-    - name: "shadowsocks-696792819"
-      type: ss
-      server: "121.46.230.232"
-      port: 65443
-      cipher: "aes-256-cfb"
-      password: "7eadc6dbe2ae"
-    # vmess 112.132.215.108:50002 延迟384ms 速度0.00MB/s
-    - name: "中国 001"
+      server: "161.118.236.226"
+      port: 56927
+      cipher: "2022-blake3-chacha20-poly1305"
+      password: "mK3U4CcxreExT+4ZbQ+ixTCRA0PpbwB2qEYHsgySaLU="
+    # vmess 112.132.215.108:50002 延迟305ms 速度n/a
+    - name: "\\U0001F7E2\\U0001F1E8\\U0001F1F3[\\U0001F39"
       type: vmess
       server: "112.132.215.108"
       port: 50002
@@ -380,104 +102,672 @@ proxies:
       alterId: 64
       cipher: "auto"
       network: tcp
-      skip-cert-verify: true
-    # ss 142.93.149.39:80 延迟612ms 速度0.00MB/s
-    - name: "shadowsocks-768399409"
+    # ss 95.40.120.162:8319 延迟397ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1ED\\U0001F1F0[\\U0001F3A#3"
       type: ss
-      server: "142.93.149.39"
-      port: 80
-      cipher: "aes-256-gcm"
-      password: "cj5Znxe2XuodJQB0"
-    # ss 211.91.158.44:21116 延迟797ms 速度0.00MB/s
-    - name: "shadowsocks-768399478"
-      type: ss
-      server: "211.91.158.44"
-      port: 21116
+      server: "95.40.120.162"
+      port: 8319
       cipher: "chacha20-ietf-poly1305"
-      password: "9325a345-c72f-4637-a8f4-34f9effb7ba6"
-    # ss e2.cover20.ir:30874 延迟1022ms 速度0.00MB/s
-    - name: "🇩🇪DE_2|2.8MB/s"
+      password: "ljqdalu13.."
+    # ss 54.95.207.148:8316 延迟401ms 速度n/a
+    - name: "EPODONIOS#2"
       type: ss
-      server: "e2.cover20.ir"
-      port: 30874
+      server: "54.95.207.148"
+      port: 8316
       cipher: "chacha20-ietf-poly1305"
-      password: "BlRtjyYlj18kYcrEL/8wcbSyqNKSPESiwSDDvisu9+o="
-    # vless jp.sofast.live:52683 延迟1841ms 速度0.00MB/s
-    - name: "广东省广州市+腾讯云"
+      password: "ljqdalu13.."
+    # vless 120.227.1.43:12528 延迟402ms 速度n/a
+    - name: "EPODONIOS#3"
       type: vless
-      server: "jp.sofast.live"
-      port: 52683
-      uuid: "399b6b23-cc40-4831-a494-61948e2df133"
-    # ss 3.75.226.122:443 延迟611ms 速度n/a
-    - name: "shadowsocks-696791484"
+      server: "120.227.1.43"
+      port: 12528
+      uuid: "f0169b08-43fd-4dc3-8195-18f6ad2fe39d"
+    # ss e1acw359hdvf.cdn000.com:31202 延迟510ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1EF\\U0001F1F5[\\U0001F3A#2"
       type: ss
-      server: "3.75.226.122"
+      server: "e1acw359hdvf.cdn000.com"
+      port: 31202
+      cipher: "2022-blake3-aes-128-gcm"
+      password: "Y2FkNzhhZWQ0MzA1NzlhZA==:ODNiMjQ4NDMtYTY2Mi00Mg=="
+    # ssr qcg8fhp6y6v9wn.cache872671.com:1301 延迟510ms 速度n/a
+    - name: "\\U0001F7E2\\U0001F1ED\\U0001F1F0[\\U0001F3A#4"
+      type: ssr
+      server: "qcg8fhp6y6v9wn.cache872671.com"
+      port: 1301
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ssr b82gubf8e7m3ar.cache872671.com:1329 延迟510ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1ED\\U0001F1F0[\\U0001F3A#4"
+      type: ssr
+      server: "b82gubf8e7m3ar.cache872671.com"
+      port: 1329
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ss 52.47.54.187:443 延迟576ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1EB\\U0001F1F7[\\U0001F3A"
+      type: ss
+      server: "52.47.54.187"
       port: 443
       cipher: "aes-256-cfb"
       password: "amazonskr05"
-    # ss 121.46.230.136:65443 延迟714ms 速度n/a
-    - name: "shadowsocks-696792815"
+    # ss 18.197.108.25:443 延迟592ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1E9\\U0001F1EA[\\U0001F3A#2"
       type: ss
-      server: "121.46.230.136"
-      port: 65443
+      server: "18.197.108.25"
+      port: 443
       cipher: "aes-256-cfb"
-      password: "7eadc6dbe2ae"
-    # ss 121.46.230.137:65443 延迟715ms 速度n/a
-    - name: "shadowsocks-696792816"
+      password: "amazonskr05"
+    # ss robon.mashhad1market.ir:1080 延迟596ms 速度n/a
+    - name: "EPODONIOS#4"
       type: ss
-      server: "121.46.230.137"
-      port: 65443
-      cipher: "aes-256-cfb"
-      password: "7eadc6dbe2ae"
-    # ss 52.47.178.34:443 延迟801ms 速度n/a
-    - name: "shadowsocks-738059789"
+      server: "robon.mashhad1market.ir"
+      port: 1080
+      cipher: "chacha20-ietf-poly1305"
+      password: "TU4NUJuMe4XlZ3NCQ_1KiQ"
+    # ss 52.47.178.34:443 延迟596ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1EB\\U0001F1F7[\\U0001F3A#2"
       type: ss
       server: "52.47.178.34"
       port: 443
       cipher: "aes-256-cfb"
       password: "amazonskr05"
-    # ss 159.89.112.218:443 延迟801ms 速度n/a
-    - name: "shadowsocks-795694332"
+    # ss 95.170.13.47:65443 延迟596ms 速度n/a
+    - name: "\\U0001F7E2\\U0001F1EB\\U0001F1F7[\\U0001F91"
       type: ss
-      server: "159.89.112.218"
-      port: 443
-      cipher: "aes-256-gcm"
-      password: "fc0heeXAqzNX86aP"
-    # ss 206.189.223.234:443 延迟817ms 速度n/a
-    - name: "shadowsocks-768399352"
-      type: ss
-      server: "206.189.223.234"
-      port: 443
-      cipher: "aes-256-gcm"
-      password: "YmrYLpErhi5oTrrv"
-    # ss 63.176.139.123:443 延迟896ms 速度n/a
-    - name: "shadowsocks-696791487"
+      server: "95.170.13.47"
+      port: 65443
+      cipher: "aes-256-cfb"
+      password: "7eadc6dbe2ae"
+    # ss 63.176.139.123:443 延迟597ms 速度n/a
+    - name: "de|8711|puddincat07@Telegram"
       type: ss
       server: "63.176.139.123"
       port: 443
       cipher: "aes-256-cfb"
       password: "amazonskr05"
-    # trojan 103.9.77.6:443 延迟907ms 速度n/a
+    # ss 3.75.226.122:443 延迟597ms 速度n/a
+    - name: "🇩🇪DE_2|2.6MB/s"
+      type: ss
+      server: "3.75.226.122"
+      port: 443
+      cipher: "aes-256-cfb"
+      password: "amazonskr05"
+    # ssr fdemtyhemkjdc2.node897828.com:1352 延迟598ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1F8\\U0001F1EC[\\U0001F3A#2"
+      type: ssr
+      server: "fdemtyhemkjdc2.node897828.com"
+      port: 1352
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ss 118.107.222.231:65443 延迟598ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1F2\\U0001F1FE[\\U0001F3A"
+      type: ss
+      server: "118.107.222.231"
+      port: 65443
+      cipher: "aes-256-cfb"
+      password: "7eadc6dbe2ae"
+    # ss 3.76.102.125:443 延迟600ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1E9\\U0001F1EA[\\U0001F3A#3"
+      type: ss
+      server: "3.76.102.125"
+      port: 443
+      cipher: "aes-256-cfb"
+      password: "amazonskr05"
+    # ss 130.61.178.226:59924 延迟601ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1E9\\U0001F1EA[\\U0001F3A#4"
+      type: ss
+      server: "130.61.178.226"
+      port: 59924
+      cipher: "2022-blake3-chacha20-poly1305"
+      password: "37GUnJBhHPQHIgIPdlC3I2z9PkMtVp1uXbUnB7NKNCk="
+    # ss 144.24.226.68:61312 延迟603ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1EC\\U0001F1E7[\\U0001F3A"
+      type: ss
+      server: "144.24.226.68"
+      port: 61312
+      cipher: "2022-blake3-chacha20-poly1305"
+      password: "FYpB220ObY0KRjx+Y394dwHNFC25PBErBm4gHYnqqZE="
+    # ssr eg24u58d52pbyr.server927871.com:1337 延迟608ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1EF\\U0001F1F5[\\U0001F3A#3"
+      type: ssr
+      server: "eg24u58d52pbyr.server927871.com"
+      port: 1337
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ssr 2rrytzwkxrqxaj.server927871.com:1338 延迟608ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1EF\\U0001F1F5[\\U0001F3A#4"
+      type: ssr
+      server: "2rrytzwkxrqxaj.server927871.com"
+      port: 1338
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # vless 144.21.38.148:62145 延迟609ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1F3\\U0001F1F1[\\U0001F3A"
+      type: vless
+      server: "144.21.38.148"
+      port: 62145
+      uuid: "8fb65472-5957-4f64-ba2d-b5812b2f155a"
+      network: tcp
+    # ss netixu.mashhad1market.ir:1080 延迟612ms 速度n/a
+    - name: "EPODONIOS#5"
+      type: ss
+      server: "netixu.mashhad1market.ir"
+      port: 1080
+      cipher: "chacha20-ietf-poly1305"
+      password: "TU4NUJuMe4XlZ3NCQ_1KiQ"
+    # ss 138.2.81.62:56927 延迟612ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1F8\\U0001F1EC[\\U0001F3A#3"
+      type: ss
+      server: "138.2.81.62"
+      port: 56927
+      cipher: "2022-blake3-chacha20-poly1305"
+      password: "ZVv41ijfHYM4T4gSUm9qqxMGkXswk5GNBGIFZz5sN6c="
+    # ssr pw3sdme5v2kj2c.node897828.com:1372 延迟612ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1F9\\U0001F1FC[\\U0001F3A"
+      type: ssr
+      server: "pw3sdme5v2kj2c.node897828.com"
+      port: 1372
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ssr 7yz6ba4ygjvcq6.node897828.com:1357 延迟612ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1F8\\U0001F1EC[\\U0001F3A#4"
+      type: ssr
+      server: "7yz6ba4ygjvcq6.node897828.com"
+      port: 1357
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ss 158.178.146.102:45819 延迟612ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1F3\\U0001F1F1[\\U0001F3A#2"
+      type: ss
+      server: "158.178.146.102"
+      port: 45819
+      cipher: "2022-blake3-chacha20-poly1305"
+      password: "Bw/0mkpYH8e2Cmu49+kEAS5UDv7UL2D/alKO76ACw/0="
+    # ss 13.38.78.128:443 延迟612ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1EB\\U0001F1F7[\\U0001F3A#3"
+      type: ss
+      server: "13.38.78.128"
+      port: 443
+      cipher: "aes-256-cfb"
+      password: "amazonskr05"
+    # ss 130.61.225.239:59924 延迟612ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1E9\\U0001F1EA[\\U0001F3A#5"
+      type: ss
+      server: "130.61.225.239"
+      port: 59924
+      cipher: "2022-blake3-chacha20-poly1305"
+      password: "F5JCVI53YRCW4UgRGI9Vr/nTowZNwHjL06QoxDeNBFY="
+    # ssr shx57c8k2zb9bj.node897828.com:1354 延迟612ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1F8\\U0001F1EC[\\U0001F3A#5"
+      type: ssr
+      server: "shx57c8k2zb9bj.node897828.com"
+      port: 1354
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ssr 7cnsbeetbcdfs2.node897828.com:1359 延迟613ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1F8\\U0001F1EC[\\U0001F4F"
+      type: ssr
+      server: "7cnsbeetbcdfs2.node897828.com"
+      port: 1359
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ss 3.70.135.154:443 延迟613ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1E9\\U0001F1EA[\\U0001F3A#6"
+      type: ss
+      server: "3.70.135.154"
+      port: 443
+      cipher: "aes-256-cfb"
+      password: "amazonskr05"
+    # ssr gtjmbbnnre3qz4.server927871.com:1335 延迟614ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1EF\\U0001F1F5[\\U0001F3A#5"
+      type: ssr
+      server: "gtjmbbnnre3qz4.server927871.com"
+      port: 1335
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ssr 78v9m3qxh6eedn.cache872671.com:1321 延迟679ms 速度n/a
+    - name: "\\U0001F7E2\\U0001F1ED\\U0001F1F0[\\U0001F3A#5"
+      type: ssr
+      server: "78v9m3qxh6eedn.cache872671.com"
+      port: 1321
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ss 159.89.114.254:443 延迟697ms 速度n/a
+    - name: "shadowsocks-779606875"
+      type: ss
+      server: "159.89.114.254"
+      port: 443
+      cipher: "aes-256-gcm"
+      password: "jCacZrWkhonLqnvd"
+    # ss 129.151.87.13:61312 延迟704ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1EC\\U0001F1E7[\\U0001F91"
+      type: ss
+      server: "129.151.87.13"
+      port: 61312
+      cipher: "2022-blake3-chacha20-poly1305"
+      password: "A6InytdtDyfER2TnQ6BJPWUl88itBkS6ksaMglhcgGU="
+    # ss 51.44.170.194:443 延迟705ms 速度n/a
+    - name: "fr|02ac|puddincat07@Telegram"
+      type: ss
+      server: "51.44.170.194"
+      port: 443
+      cipher: "aes-256-cfb"
+      password: "amazonskr05"
+    # trojan 103.9.77.6:443 延迟714ms 速度n/a
     - name: "VN 6 → tg@nicevpn123"
       type: trojan
       server: "103.9.77.6"
       port: 443
       password: "5a92d674-308c-4d95-b283-28383e63a59b"
       skip-cert-verify: true
-    # trojan 139.162.49.215:443 延迟1226ms 速度n/a
-    - name: "🇸🇬 SG 27 → tg@nicevpn123"
-      type: trojan
-      server: "139.162.49.215"
+    # ssr a83jb3sztjnqd4.cache872671.com:1310 延迟714ms 速度n/a
+    - name: "\\U0001F7E2\\U0001F1ED\\U0001F1F0[\\U0001F3A#6"
+      type: ssr
+      server: "a83jb3sztjnqd4.cache872671.com"
+      port: 1310
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ss 142.93.149.39:80 延迟714ms 速度n/a
+    - name: "\\U0001F534\\U0001F1E8\\U0001F1E6[\\U0001F3A"
+      type: ss
+      server: "142.93.149.39"
+      port: 80
+      cipher: "aes-256-gcm"
+      password: "cj5Znxe2XuodJQB0"
+    # ssr 894azjvakdy9t7.node897828.com:1358 延迟714ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1F8\\U0001F1EC[\\U0001F4F#2"
+      type: ssr
+      server: "894azjvakdy9t7.node897828.com"
+      port: 1358
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ss 51.44.167.151:443 延迟798ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1EB\\U0001F1F7[\\U0001F3A#4"
+      type: ss
+      server: "51.44.167.151"
       port: 443
-      password: "b3965d2d-3b82-45cc-927b-1336aca3f3fe"
-      skip-cert-verify: true
-    # trojan 142.93.226.128:443 延迟1227ms 速度n/a
-    - name: "🇳🇱 NL 9 → tg@nicevpn123"
-      type: trojan
-      server: "142.93.226.128"
+      cipher: "aes-256-cfb"
+      password: "amazonskr05"
+    # ss 130.61.45.116:59924 延迟802ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1E9\\U0001F1EA[\\U0001F3A#7"
+      type: ss
+      server: "130.61.45.116"
+      port: 59924
+      cipher: "2022-blake3-chacha20-poly1305"
+      password: "GTE6aBIunVF3QcgseTwgvwf3VIU/lCB5HMXk5GnSPWw="
+    # ssr mqyrg42tdc888n.server927871.com:1339 延迟804ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1EF\\U0001F1F5[\\U0001F3A#6"
+      type: ssr
+      server: "mqyrg42tdc888n.server927871.com"
+      port: 1339
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ss 129.151.89.64:61312 延迟813ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1EC\\U0001F1E7[\\U0001F3A#2"
+      type: ss
+      server: "129.151.89.64"
+      port: 61312
+      cipher: "2022-blake3-chacha20-poly1305"
+      password: "LF7cJ45rErQj6klFY7TkrQI4o6rvqfLIOARby9Z2V/4="
+    # ss 13.38.46.203:443 延迟813ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1EB\\U0001F1F7[\\U0001F3A#5"
+      type: ss
+      server: "13.38.46.203"
       port: 443
-      password: "8c03bc97-6dd1-485b-9ae6-c0539929592c"
-      skip-cert-verify: true
+      cipher: "aes-256-cfb"
+      password: "amazonskr05"
+    # ss 194.87.47.162:10901 延迟817ms 速度n/a
+    - name: "EPODONIOS#6"
+      type: ss
+      server: "194.87.47.162"
+      port: 10901
+      cipher: "aes-256-gcm"
+      password: "d1fa2f4b98a38bc8"
+    # ss 13.37.226.110:443 延迟817ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1EB\\U0001F1F7[\\U0001F3A#6"
+      type: ss
+      server: "13.37.226.110"
+      port: 443
+      cipher: "aes-256-cfb"
+      password: "amazonskr05"
+    # ss 130.61.148.92:59924 延迟817ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1E9\\U0001F1EA[\\U0001F3A#8"
+      type: ss
+      server: "130.61.148.92"
+      port: 59924
+      cipher: "2022-blake3-chacha20-poly1305"
+      password: "iMCyLh/KjHKyfw2Y9uT9AK5zu6o04oI6AtshYHbgpVY="
+    # ssr xr9btkx2uwygfb.cache872671.com:1327 延迟817ms 速度n/a
+    - name: "\\U0001F7E2\\U0001F1ED\\U0001F1F0[\\U0001F3A#7"
+      type: ssr
+      server: "xr9btkx2uwygfb.cache872671.com"
+      port: 1327
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ssr nm5bpqbaen3bjt.server927871.com:1334 延迟902ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1EF\\U0001F1F5[\\U0001F3A#7"
+      type: ssr
+      server: "nm5bpqbaen3bjt.server927871.com"
+      port: 1334
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ssr zuyvqthn5jzjbh.node897828.com:1351 延迟910ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1F8\\U0001F1EC[\\U0001F3A#6"
+      type: ssr
+      server: "zuyvqthn5jzjbh.node897828.com"
+      port: 1351
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # vless 157.137.209.176:62145 延迟919ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1E8\\U0001F1F4[\\U0001F3A"
+      type: vless
+      server: "157.137.209.176"
+      port: 62145
+      uuid: "8fb65472-5957-4f64-ba2d-b5812b2f155a"
+      network: tcp
+    # ssr tb77hqsccm8cmv.server927871.com:1382 延迟920ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1FA\\U0001F1F8[\\U0001F3A"
+      type: ssr
+      server: "tb77hqsccm8cmv.server927871.com"
+      port: 1382
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # vless 157.137.218.106:62145 延迟920ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1E8\\U0001F1F4[\\U0001F3A#2"
+      type: vless
+      server: "157.137.218.106"
+      port: 62145
+      uuid: "8fb65472-5957-4f64-ba2d-b5812b2f155a"
+      network: tcp
+    # ss 103.169.67.34:65443 延迟1007ms 速度n/a
+    - name: "th|55f8|puddincat07@Telegram"
+      type: ss
+      server: "103.169.67.34"
+      port: 65443
+      cipher: "aes-256-cfb"
+      password: "7eadc6dbe2ae"
+    # vless 157.137.214.234:62145 延迟1021ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1E8\\U0001F1F4[\\U0001F3A#3"
+      type: vless
+      server: "157.137.214.234"
+      port: 62145
+      uuid: "8fb65472-5957-4f64-ba2d-b5812b2f155a"
+      network: tcp
+    # vless 157.137.218.222:62145 延迟1021ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1E8\\U0001F1F4[\\U0001F3A#4"
+      type: vless
+      server: "157.137.218.222"
+      port: 62145
+      uuid: "8fb65472-5957-4f64-ba2d-b5812b2f155a"
+      network: tcp
+    # ssr gtcpse4ptcm46h.server927871.com:1333 延迟1021ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1EF\\U0001F1F5[\\U0001F3A#8"
+      type: ssr
+      server: "gtcpse4ptcm46h.server927871.com"
+      port: 1333
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ss 163.176.6.223:59319 延迟1022ms 速度n/a
+    - name: "EPODONIOS#7"
+      type: ss
+      server: "163.176.6.223"
+      port: 59319
+      cipher: "2022-blake3-chacha20-poly1305"
+      password: "SP1M0IipjvtsuKVyn9U2iK+ZKuuQ0afVhLCicK9pO8Y="
+    # ssr waa3g8tqb78k85.node897828.com:1356 延迟1114ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1F8\\U0001F1EC[\\U0001F3A#7"
+      type: ssr
+      server: "waa3g8tqb78k85.node897828.com"
+      port: 1356
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ssr uhs2yt57cxjawv.server927871.com:1393 延迟1124ms 速度n/a
+    - name: "\\U0001F534\\U0001F1EC\\U0001F1E7[\\U0001F91"
+      type: ssr
+      server: "uhs2yt57cxjawv.server927871.com"
+      port: 1393
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ssr k92vnke3356ns4.cache872671.com:1326 延迟1214ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1ED\\U0001F1F0[\\U0001F3A#5"
+      type: ssr
+      server: "k92vnke3356ns4.cache872671.com"
+      port: 1326
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ssr c8yfxszk8c7vus.server927871.com:1380 延迟1225ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1FA\\U0001F1F8[\\U0001F3A#2"
+      type: ssr
+      server: "c8yfxszk8c7vus.server927871.com"
+      port: 1380
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ssr f5hbtjrm.server927871.com:1399 延迟1329ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1EF\\U0001F1F5[\\U0001F3A#9"
+      type: ssr
+      server: "f5hbtjrm.server927871.com"
+      port: 1399
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ss 121.46.230.136:65443 延迟1416ms 速度n/a
+    - name: "cn|3cba|puddincat07@Telegram"
+      type: ss
+      server: "121.46.230.136"
+      port: 65443
+      cipher: "aes-256-cfb"
+      password: "7eadc6dbe2ae"
+    # ssr qd8vhtgktk4hkg.cache872671.com:1308 延迟1521ms 速度n/a
+    - name: "\\U0001F7E2\\U0001F1ED\\U0001F1F0[\\U0001F3A#8"
+      type: ssr
+      server: "qd8vhtgktk4hkg.cache872671.com"
+      port: 1308
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ssr kxftjn8bz7upwj.cache872671.com:1307 延迟1530ms 速度n/a
+    - name: "\\U0001F7E2\\U0001F1ED\\U0001F1F0[\\U0001F91"
+      type: ssr
+      server: "kxftjn8bz7upwj.cache872671.com"
+      port: 1307
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ssr zquxqu4vxyxgue.cache872671.com:1309 延迟1534ms 速度n/a
+    - name: "\\U0001F7E2\\U0001F1ED\\U0001F1F0[\\U0001F3A#9"
+      type: ssr
+      server: "zquxqu4vxyxgue.cache872671.com"
+      port: 1309
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ssr pvpyhrpmm4wste.server927871.com:1336 延迟1625ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1EF\\U0001F1F5[\\U0001F3A#10"
+      type: ssr
+      server: "pvpyhrpmm4wste.server927871.com"
+      port: 1336
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ssr 7newvdyqkyyhwm.server927871.com:1388 延迟1635ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1FA\\U0001F1F8[\\U0001F3A#3"
+      type: ssr
+      server: "7newvdyqkyyhwm.server927871.com"
+      port: 1388
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ssr 9q2z57eqtbgqvf.server927871.com:1332 延迟1636ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1EF\\U0001F1F5[\\U0001F3A#11"
+      type: ssr
+      server: "9q2z57eqtbgqvf.server927871.com"
+      port: 1332
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # vless 180.178.60.254:10000 延迟1717ms 速度n/a
+    - name: "vless-699893656"
+      type: vless
+      server: "180.178.60.254"
+      port: 10000
+      uuid: "431fe973-a43a-4fac-bf83-2a772e0d0625"
+      network: tcp
+    # ssr hqux7dvs9tftys.cache872671.com:1306 延迟1738ms 速度n/a
+    - name: "\\U0001F7E2\\U0001F1ED\\U0001F1F0[\\U0001F3A#10"
+      type: ssr
+      server: "hqux7dvs9tftys.cache872671.com"
+      port: 1306
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ss 199.181.197.38:443 延迟1837ms 速度n/a
+    - name: "US_a722f_0054"
+      type: ss
+      server: "199.181.197.38"
+      port: 443
+      cipher: "none"
+      password: "3e96ef7d-8637-42c2-ac73-75182196e755"
+    # ssr ymbf4ec7zffrtv.server927871.com:1381 延迟1932ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1FA\\U0001F1F8[\\U0001F3A#4"
+      type: ssr
+      server: "ymbf4ec7zffrtv.server927871.com"
+      port: 1381
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # vless us22.sofast.live:58011 延迟2033ms 速度n/a
+    - name: "EPODONIOS#8"
+      type: vless
+      server: "us22.sofast.live"
+      port: 58011
+      uuid: "0afc6426-606c-48e7-bd70-3c424a416842"
+    # vless jp.sofast.live:52683 延迟2035ms 速度n/a
+    - name: "EPODONIOS#9"
+      type: vless
+      server: "jp.sofast.live"
+      port: 52683
+      uuid: "399b6b23-cc40-4831-a494-61948e2df133"
+    # ss 195.133.23.200:10666 延迟2046ms 速度n/a
+    - name: "EPODONIOS#10"
+      type: ss
+      server: "195.133.23.200"
+      port: 10666
+      cipher: "aes-256-gcm"
+      password: "81a20429165df87e"
+    # ss 212.192.15.46:10666 延迟2440ms 速度n/a
+    - name: "shadowsocks-809818771"
+      type: ss
+      server: "212.192.15.46"
+      port: 10666
+      cipher: "aes-256-gcm"
+      password: "72553320ae6bcc8f"
+    # ssr cwmk2a76ydjwf7.server927871.com:1386 延迟2542ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1FA\\U0001F1F8[\\U0001F3A#5"
+      type: ssr
+      server: "cwmk2a76ydjwf7.server927871.com"
+      port: 1386
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
+    # ssr 2n2m2r8gkvr7kx.server927871.com:1383 延迟2558ms 速度n/a
+    - name: "\\U0001F7E0\\U0001F1FA\\U0001F1F8[\\U0001F3A#6"
+      type: ssr
+      server: "2n2m2r8gkvr7kx.server927871.com"
+      port: 1383
+      protocol: auth_aes128_md5
+      cipher: "chacha20-ietf"
+      obfs: plain
+      password: "MAYING"
+      protocol-param: "31296:U2T93o"
 
 proxy-groups:
   - name: 🚀 手动选择
@@ -485,20 +775,14 @@ proxy-groups:
     proxies:
       - ♻️ 自动选择
       - DIRECT
-      - ⚡hysteria2-755770771
-      - ⚡hysteria2-468883194
-      - ⚡hysteria2-738907388
-      - ⚡hysteria2-299162412
+      - ⚡\U0001F7E0\U0001F1E9\U0001F1EA[\U0001F3A
   - name: ♻️ 自动选择
     type: url-test
     url: http://www.gstatic.com/generate_204
     interval: 300
     tolerance: 100
     proxies:
-      - ⚡hysteria2-755770771
-      - ⚡hysteria2-468883194
-      - ⚡hysteria2-738907388
-      - ⚡hysteria2-299162412
+      - ⚡\U0001F7E0\U0001F1E9\U0001F1EA[\U0001F3A
 
 rules:
   - MATCH,🚀 手动选择

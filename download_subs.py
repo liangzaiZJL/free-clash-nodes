@@ -43,6 +43,18 @@ SUBS = {
     "a2470982985-v2ray.txt":    ["https://raw.githubusercontent.com/a2470982985/getNode/main/v2ray.txt"],
     "ripaojiedian-freenode-clash": ["https://raw.githubusercontent.com/ripaojiedian/freenode/main/clash"],
     "mermeroo-All_base64.txt":  ["https://raw.githubusercontent.com/mermeroo/V2RAY-CLASH-BASE64-Subscription.Links/main/SUB%20LINKS/All_base64.txt"],
+    # --- 新增高质量源（来自知名聚合列表，反馈闭环会自动淘汰死源） ---
+    "freefq-v2ray":             ["https://raw.githubusercontent.com/freefq/free/master/v2ray"],
+    "ssrsub-v2ray":             ["https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray"],
+    "Leon406-subshare-vless":   ["https://raw.githubusercontent.com/Leon406/SubCrawler/master/sub/share/vless"],
+    "Epodonios-all-configs":    ["https://raw.githubusercontent.com/Epodonios/v2ray-configs/main/All_Configs_Sub.txt"],
+    "SoliSpirit-all-configs":   ["https://raw.githubusercontent.com/SoliSpirit/v2ray-configs/main/all_configs.txt"],
+    "vxiaov-links":             ["https://raw.githubusercontent.com/vxiaov/free_proxies/main/links.txt"],
+    "sakha1370-OpenRay":        ["https://raw.githubusercontent.com/sakha1370/OpenRay/main/output/all_valid_proxies.txt"],
+    "Barabama-nodefree":        ["https://raw.githubusercontent.com/Barabama/FreeNodes/main/nodes/nodefree.txt"],
+    "mheidari98-all":           ["https://raw.githubusercontent.com/mheidari98/.proxy/refs/heads/main/all"],
+    "vxiaov-free_proxy_ss":     ["https://raw.githubusercontent.com/vxiaov/free_proxy_ss/main/v2ray"],
+    "MhdiTaheri-mix":           ["https://raw.githubusercontent.com/MhdiTaheri/V2rayCollector/main/sub/mix"],
 }
 
 def _fetch_one(url):

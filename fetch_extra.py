@@ -47,16 +47,44 @@ def extract_tg_messages(html):
         out.append(clean.strip())
     return out
 
-def main():
-    manifest = {}
-    # ---- A. TG 频道 ----
-    for ch in TG_CHANNELS:
-        data, st = fetch(f"https://t.me/s/{ch}")
+def fetch_tg_channel(ch, pages=3):
+    """翻页抓取 TG 频道公开预览，返回消息文本列表（按时间新->旧）。"""
+    all_texts = []
+    seen_ids = set()
+    before = None
+    for _ in range(pages):
+        url = f"https://t.me/s/{ch}"
+        if before:
+            url += f"?before={before}"
+        data, st = fetch(url)
         if data is None:
-            print(f"[FAIL] tg/{ch}: {st}", flush=True)
-            continue
+            break
         html = data.decode("utf-8", "replace")
         texts = extract_tg_messages(html)
+        ids = re.findall(r'data-post="[^"]+/(\d+)"', html)
+        if not texts:
+            break
+        for i, t in enumerate(texts):
+            mid = ids[i] if i < len(ids) else "?"
+            if mid in seen_ids:
+                continue
+            seen_ids.add(mid)
+            all_texts.append(t)
+        nums = [int(x) for x in ids]
+        before = min(nums) if nums else None
+        if before is None:
+            break
+        time.sleep(0.4)
+    return all_texts
+
+def main():
+    manifest = {}
+    # ---- A. TG 频道（翻页） ----
+    for ch in TG_CHANNELS:
+        texts = fetch_tg_channel(ch, pages=3)
+        if not texts:
+            print(f"[FAIL] tg/{ch}: no messages", flush=True)
+            continue
         # 1) 消息内订阅链接
         links = []
         for t in texts:

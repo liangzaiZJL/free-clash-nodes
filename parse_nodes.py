@@ -531,10 +531,18 @@ def main():
         # yaml 节点规范化：过滤无 server/port
         clean = []
         for n in nodes:
-            if not isinstance(n, dict) or not n.get("server") or not n.get("port"):
+            if not isinstance(n, dict) or not n.get("server"):
                 continue
             if n.get("type") not in ("ss", "ssr", "vmess", "vless", "trojan", "hysteria2", "tuic"):
                 continue
+            # 端口容错：可能是 "443?" 之类带尾随字符的脏数据
+            try:
+                port = int(str(n.get("port", "")).strip().rstrip("?"))
+            except Exception:
+                continue
+            if not (1 <= port <= 65535):
+                continue
+            n["port"] = port
             n["_sub"] = fn
             clean.append(n)
         per_sub[fn] = clean

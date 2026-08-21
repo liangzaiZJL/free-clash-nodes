@@ -1,16 +1,16 @@
 # 免费 Clash 节点订阅收集与测试报告
 
-> 生成时间: 2026-08-21 10:25 (UTC+8) | 测试环境: Windows 11 + Python 3.12 + mihomo v1.19.30
+> 生成时间: 2026-08-21 12:25 (UTC+8) | 测试环境: Windows 11 + Python 3.12 + mihomo v1.19.30
 
 ## 一、总体结果
 
 | 阶段 | 节点数 | 说明 |
 |---|---|---|
-| 抓取解析 | **10,299** | 24 个订阅源去重后 |
-| TCP 可达 | **3,195** (31%) | 3s 内 TCP 建连成功 |
-| 协议可用 | **70** | 通过节点实际请求 HTTP 204 成功 |
-| 二次验证 | **66** | 两次延迟测试均通过 |
-| 测速成功 | **56** | 8MB 真实下载可完成 |
+| 抓取解析 | **20,529** | 24 个订阅源去重后 |
+| TCP 可达 | **7,950** (31%) | 3s 内 TCP 建连成功 |
+| 协议可用 | **101** | 通过节点实际请求 HTTP 204 成功 |
+| 二次验证 | **92** | 两次延迟测试均通过 |
+| 测速成功 | **10** | 8MB 真实下载可完成 |
 
 > 结论：免费节点**整体可用率约 0.7%**（10,299 去重节点中 70 个协议可用）。大量节点 TCP 能连（多为 Cloudflare 前置）但后端已死。**推荐直接订阅高质量来源 + 定期自测**。
 
@@ -18,37 +18,44 @@
 
 | 来源 | 抓取到的节点 | 协议可用 | 可用率 | 质量评价 |
 |---|---|---|---|---|
-| Au1rxx-clash-full.yaml | 81 | 61 | 75% | ✅ 推荐 |
-| NiceVPN-clash.yaml | 1088 | 3 | 0% | ⚠️ 一般 |
-| Ruk1ng001-clash.yaml | 72 | 2 | 2% | ⚠️ 一般 |
-| NoMoreWalls-list.yml | 11 | 1 | 9% | ⚠️ 一般 |
-| Pawdroid-Free-servers | 20 | 1 | 5% | ⚠️ 一般 |
-| anaer-clash.yaml | 409 | 1 | 0% | ⚠️ 一般 |
-| free18-c.yaml | 99 | 1 | 1% | ⚠️ 一般 |
-| BestClash-proxies.yaml | 12 | 0 | 0% | ❌ 基本不可用 |
-| SSAggregator-merge.yml | 1050 | 0 | 0% | ❌ 基本不可用 |
-| airport-tested.yaml | 310 | 0 | 0% | ❌ 基本不可用 |
-| ermaozi-clash.yml | 4 | 0 | 0% | ❌ 基本不可用 |
-| ermaozi-v2ray.txt | 7 | 0 | 0% | ❌ 基本不可用 |
-| mfbpn-trial.yaml | 4 | 0 | 0% | ❌ 基本不可用 |
-| ts-sf-clash | 24 | 0 | 0% | ❌ 基本不可用 |
-| mfuu-v2ray | 3 | 0 | 0% | ❌ 基本不可用 |
-| ts-sf-v2 | 1 | 0 | 0% | ❌ 基本不可用 |
+| Ruk1ng001-clash.yaml | 106 | 76 | 71% | ✅ 推荐 |
+| Epodonios-all-configs | 1175 | 11 | 0% | ⚠️ 一般 |
+| BestClash-proxies.yaml | 14 | 6 | 42% | ⚠️ 一般 |
+| Au1rxx-clash-full.yaml | 108 | 3 | 2% | ⚠️ 一般 |
+| NiceVPN-clash.yaml | 1078 | 2 | 0% | ⚠️ 一般 |
+| NoMoreWalls-list.yml | 7 | 1 | 14% | ⚠️ 一般 |
+| extra-agg-pool--previous-yaml.yaml | 172 | 1 | 0% | ⚠️ 一般 |
+| ssrsub-v2ray | 1 | 1 | 100% | ✅ 推荐 |
+| Barabama-nodefree | 11 | 0 | 0% | ❌ 基本不可用 |
+| Leon406-subshare-vless | 2217 | 0 | 0% | ❌ 基本不可用 |
+| MhdiTaheri-mix | 43 | 0 | 0% | ❌ 基本不可用 |
+| Pawdroid-Free-servers | 5 | 0 | 0% | ❌ 基本不可用 |
+| SSAggregator-merge.yml | 1024 | 0 | 0% | ❌ 基本不可用 |
+| SoliSpirit-all-configs | 204 | 0 | 0% | ❌ 基本不可用 |
+| airport-tested.yaml | 152 | 0 | 0% | ❌ 基本不可用 |
+| anaer-clash.yaml | 6 | 0 | 0% | ❌ 基本不可用 |
+| extra-agg-pool--pool-yaml.yaml | 72 | 0 | 0% | ❌ 基本不可用 |
+| ermaozi-clash.yml | 1 | 0 | 0% | ❌ 基本不可用 |
+| free18-c.yaml | 23 | 0 | 0% | ❌ 基本不可用 |
+| mfbpn-trial.yaml | 8 | 0 | 0% | ❌ 基本不可用 |
+| sakha1370-OpenRay | 1522 | 0 | 0% | ❌ 基本不可用 |
+| vxiaov-clash-provider.yaml | 1 | 0 | 0% | ❌ 基本不可用 |
 
 **最推荐订阅（实测可用率最高）：**
 
-- `https://github.com/Au1rxx/free-vpn-subscriptions/raw/main/output/clash.yaml`
+- `https://raw.githubusercontent.com/Ruk1ng001/freeSub/main/clash.yaml`
+- `https://raw.githubusercontent.com/ssrsub/ssr/master/v2ray`
 
 ## 三、协议类型可用率
 
 | 协议 | TCP可达 | 协议可用 | 可用率 |
 |---|---|---|---|
-| 131 | 131 | 58 | 44% |
-| 12 | 12 | 5 | 41% |
-| 800 | 800 | 3 | 0% |
-| 441 | 441 | 3 | 0% |
-| 1755 | 1755 | 1 | 0% |
-| 56 | 56 | 0 | 0% |
+| 140 | 140 | 47 | 33% |
+| 73 | 73 | 40 | 54% |
+| 5240 | 5240 | 9 | 0% |
+| 1886 | 1886 | 2 | 0% |
+| 590 | 590 | 2 | 0% |
+| 21 | 21 | 1 | 4% |
 
 > ss / hysteria2 存活率最高（40%+）；vmess / trojan / vless 多为 Cloudflare 前置的死节点。
 
@@ -56,35 +63,33 @@
 
 | 速度 | 延迟 | 类型 | 服务器 | 来源 |
 |---|---|---|---|---|
-| 0.76 MB/s | 407ms | hysteria2 | `45.32.252.144:443` | Au1rxx-clash-full.yaml |
-| 0.36 MB/s | 510ms | hysteria2 | `66.94.121.46:443` | Au1rxx-clash-full.yaml |
-| 0.24 MB/s | 388ms | hysteria2 | `player.wwwinternetvideo.click:443` | Au1rxx-clash-full.yaml |
-| 0.14 MB/s | 407ms | hysteria2 | `starlink-ft.251313.xyz:443` | Au1rxx-clash-full.yaml |
-| 0.01 MB/s | 282ms | vless | `120.227.1.43:12528` | Ruk1ng001-clash.yaml |
-| 0.01 MB/s | 305ms | hysteria2 | `fast.wwwinternetvideo.click:443` | Au1rxx-clash-full.yaml |
-| 0.01 MB/s | 406ms | ss | `211.91.158.44:21110` | Au1rxx-clash-full.yaml |
-| 0.01 MB/s | 497ms | ss | `211.91.158.26:21103` | Au1rxx-clash-full.yaml |
-| 0.01 MB/s | 509ms | ss | `211.91.158.26:21121` | Au1rxx-clash-full.yaml |
-| 0.01 MB/s | 509ms | ss | `211.91.158.26:21119` | Au1rxx-clash-full.yaml |
-| 0.01 MB/s | 510ms | ss | `211.91.158.26:21109` | Au1rxx-clash-full.yaml |
-| 0.01 MB/s | 510ms | ss | `211.91.158.44:21119` | Au1rxx-clash-full.yaml |
+| 0.76 MB/s | 407ms | hysteria2 | `player.wwwinternetvideo.click:443` | Ruk1ng001-clash.yaml |
+| 0.02 MB/s | 499ms | ss | `49.254.204.133:1774` | Epodonios-all-configs |
+| 0.01 MB/s | 397ms | ssr | `qcg8fhp6y6v9wn.cache872671.com:1302` | Ruk1ng001-clash.yaml |
+| 0.01 MB/s | 493ms | ss | `e1acw359hdvf.cdn000.com:31201` | Ruk1ng001-clash.yaml |
+| 0.01 MB/s | 494ms | ssr | `5zkpq9sentjnah.cache872671.com:1322` | Ruk1ng001-clash.yaml |
+| 0.01 MB/s | 494ms | ssr | `4vnx5kqwk8mxsr.cache872671.com:1320` | Ruk1ng001-clash.yaml |
+| 0.01 MB/s | 496ms | ss | `121.46.230.138:65443` | Ruk1ng001-clash.yaml |
+| 0.01 MB/s | 498ms | ssr | `neetb62ecrq2zg.cache872671.com:1304` | Ruk1ng001-clash.yaml |
+| 0.00 MB/s | 306ms | ss | `hk.kexueyun.top:1011` | Ruk1ng001-clash.yaml |
+| 0.00 MB/s | 392ms | ss | `161.118.236.226:56927` | Ruk1ng001-clash.yaml |
 
 ## 五、延迟最低的节点
 
 | 延迟 | 速度 | 类型 | 服务器 | 来源 |
 |---|---|---|---|---|
-| 282ms | 0.01 MB/s | vless | `120.227.1.43:12528` | Ruk1ng001-clash.yaml |
-| 305ms | 0.01 MB/s | hysteria2 | `fast.wwwinternetvideo.click:443` | Au1rxx-clash-full.yaml |
-| 384ms | 0.00 MB/s | vmess | `112.132.215.108:50002` | anaer-clash.yaml |
-| 388ms | 0.24 MB/s | hysteria2 | `player.wwwinternetvideo.click:443` | Au1rxx-clash-full.yaml |
-| 406ms | 0.01 MB/s | ss | `211.91.158.44:21110` | Au1rxx-clash-full.yaml |
-| 407ms | 0.76 MB/s | hysteria2 | `45.32.252.144:443` | Au1rxx-clash-full.yaml |
-| 407ms | 0.14 MB/s | hysteria2 | `starlink-ft.251313.xyz:443` | Au1rxx-clash-full.yaml |
-| 497ms | 0.01 MB/s | ss | `211.91.158.26:21103` | Au1rxx-clash-full.yaml |
-| 509ms | 0.01 MB/s | ss | `211.91.158.26:21121` | Au1rxx-clash-full.yaml |
-| 509ms | 0.01 MB/s | ss | `211.91.158.26:21119` | Au1rxx-clash-full.yaml |
-| 510ms | 0.36 MB/s | hysteria2 | `66.94.121.46:443` | Au1rxx-clash-full.yaml |
-| 510ms | 0.01 MB/s | ss | `211.91.158.26:21109` | Au1rxx-clash-full.yaml |
+| 305ms | n/a | vmess | `112.132.215.108:50002` | Ruk1ng001-clash.yaml |
+| 306ms | 0.00 MB/s | ss | `hk.kexueyun.top:1011` | Ruk1ng001-clash.yaml |
+| 392ms | 0.00 MB/s | ss | `161.118.236.226:56927` | Ruk1ng001-clash.yaml |
+| 397ms | 0.01 MB/s | ssr | `qcg8fhp6y6v9wn.cache872671.com:1302` | Ruk1ng001-clash.yaml |
+| 397ms | n/a | ss | `95.40.120.162:8319` | Ruk1ng001-clash.yaml |
+| 401ms | n/a | ss | `54.95.207.148:8316` | Epodonios-all-configs |
+| 402ms | n/a | vless | `120.227.1.43:12528` | Epodonios-all-configs |
+| 407ms | 0.76 MB/s | hysteria2 | `player.wwwinternetvideo.click:443` | Ruk1ng001-clash.yaml |
+| 493ms | 0.01 MB/s | ss | `e1acw359hdvf.cdn000.com:31201` | Ruk1ng001-clash.yaml |
+| 494ms | 0.01 MB/s | ssr | `5zkpq9sentjnah.cache872671.com:1322` | Ruk1ng001-clash.yaml |
+| 494ms | 0.01 MB/s | ssr | `4vnx5kqwk8mxsr.cache872671.com:1320` | Ruk1ng001-clash.yaml |
+| 496ms | 0.01 MB/s | ss | `121.46.230.138:65443` | Ruk1ng001-clash.yaml |
 
 ## 六、使用方法
 
