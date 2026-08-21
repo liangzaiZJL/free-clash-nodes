@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 """从 GitHub 仓库收集免费 Clash/V2Ray 订阅链接。"""
-import json, re, sys, time, urllib.request, socket
+import json, re, sys, time, urllib.request, socket, threading
 
 socket.setdefaulttimeout(20)
 HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"}
@@ -37,23 +37,34 @@ def candidates(repo):
 
 def main():
     out = {}
-    for repo in REPOS:
+    boxes = []
+    def run_repo(repo, box):
         got = False
         for url in candidates(repo):
             text = fetch(url)
             if not text:
                 continue
             got = True
-            # 提取 URL
             urls = set(re.findall(r'https?://[^\s"\'<>\)\]\}]+', text))
-            out[repo] = {"source": url, "urls": sorted(urls), "text_len": len(text)}
-            print(f"[{repo}] OK {url} ({len(text)}B, {len(urls)} urls)")
-            break
-        if not got:
-            print(f"[{repo}] FAILED")
+            box["res"] = (repo, url, sorted(urls), len(text))
+            return
+        box["res"] = (repo, None, None, 0)
+    for repo in REPOS:
+        box = {}
+        t = threading.Thread(target=run_repo, args=(repo, box), daemon=True)
+        t.start()
+        boxes.append((repo, t, box))
+    for repo, t, box in boxes:
+        t.join(timeout=90)
+        repo2, url, urls, text_len = box.get("res", (repo, None, None, 0))
+        if url is None:
+            print(f"[{repo}] FAILED", flush=True)
+            continue
+        out[repo] = {"source": url, "urls": urls, "text_len": text_len}
+        print(f"[{repo}] OK {url} ({text_len}B, {len(urls)} urls)", flush=True)
     with open("sources_raw.json", "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
-    print("saved sources_raw.json")
+    print("saved sources_raw.json", flush=True)
 
 if __name__ == "__main__":
     main()

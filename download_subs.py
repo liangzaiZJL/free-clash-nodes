@@ -71,25 +71,31 @@ def worker(args):
 def main():
     os.makedirs("subs", exist_ok=True)
     manifest = {}
+    # 并行下载全部订阅源（daemon 线程；总预算 90 秒，挂住的直接放弃）
+    boxes = []
     for name, urls in SUBS.items():
-        result_box = {}
-        def run():
-            result_box["res"] = worker((name, urls))
+        box = {}
+        def run(box=box, name=name, urls=urls):
+            box["res"] = worker((name, urls))
         t = threading.Thread(target=run, daemon=True)
         t.start()
-        t.join(timeout=60)
-        if "res" not in result_box:
+        boxes.append((name, t, box))
+    deadline = time.time() + 90
+    for name, t, box in boxes:
+        t.join(timeout=max(0.0, deadline - time.time()))
+        res = box.get("res")
+        if res is None:
             print(f"[FAIL] {name}: HARD TIMEOUT", flush=True)
-            manifest[name] = {"urls": urls, "status": "FAIL", "error": "hard timeout"}
+            manifest[name] = {"urls": SUBS[name], "status": "FAIL", "error": "hard timeout"}
             continue
-        _name, data, err = result_box["res"]
+        _name, data, err = res
         if data is None:
-            manifest[name] = {"urls": urls, "status": "FAIL", "error": err}
+            manifest[name] = {"urls": SUBS[name], "status": "FAIL", "error": err}
             continue
         path = os.path.join("subs", name)
         with open(path, "wb") as f:
             f.write(data)
-        manifest[name] = {"urls": urls, "status": "OK", "bytes": len(data)}
+        manifest[name] = {"urls": SUBS[name], "status": "OK", "bytes": len(data)}
     with open("subs_manifest.json", "w", encoding="utf-8") as f:
         json.dump(manifest, f, ensure_ascii=False, indent=2)
     print("saved subs_manifest.json", flush=True)

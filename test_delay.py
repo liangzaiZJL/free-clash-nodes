@@ -8,7 +8,7 @@ sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding="utf-8", errors="repla
 API = "http://127.0.0.1:9098"
 DELAY_URL = "http://www.gstatic.com/generate_204"
 TIMEOUT_MS = 3500
-CONCURRENCY = 10
+CONCURRENCY = 16
 CHUNK = 400
 
 def api_get(path, timeout=12):
@@ -66,15 +66,20 @@ def main():
         print("API DOWN at start", flush=True)
         return
 
+    # 按 TCP 延迟升序测试：先测快的，Ctrl-C 提前中断也能拿到较好的结果
+    order = sorted(range(len(tcp_ok)),
+                   key=lambda i: (tcp_ok[i].get("tcp_ms") is None, tcp_ok[i].get("tcp_ms") or 99999))
+    names_ordered = [names[i] for i in order]
+
     results = {}
     done = 0
-    for s in range(0, len(names), CHUNK):
-        chunk = names[s:s + CHUNK]
+    for s in range(0, len(names_ordered), CHUNK):
+        chunk = names_ordered[s:s + CHUNK]
         chunk_res = run_chunk(chunk)
         results.update(chunk_res)
         done += len(chunk)
         alive = sum(1 for r in results.values() if r["delay_ms"] is not None)
-        print(f"  {done}/{len(names)} alive={alive}", flush=True)
+        print(f"  {done}/{len(names_ordered)} alive={alive}", flush=True)
         # 健康检查
         if not healthy():
             print(f"  API down after chunk, waiting for recovery...", flush=True)
