@@ -544,7 +544,18 @@ def main():
         json.dump(all_nodes, f, ensure_ascii=False, indent=1)
     with open("nodes/per_sub.json", "w", encoding="utf-8") as f:
         json.dump(per_sub, f, ensure_ascii=False, indent=1)
-    print(f"TOTAL: {len(all_nodes)} nodes", flush=True)
+    # 去重（同 type+server+port 只保留一个）
+    seen = set()
+    dedup = []
+    for n in all_nodes:
+        k = (n["type"], str(n.get("server", "")).lower(), n.get("port"))
+        if k in seen:
+            continue
+        seen.add(k)
+        dedup.append(n)
+    with open("nodes/dedup_nodes.json", "w", encoding="utf-8") as f:
+        json.dump(dedup, f, ensure_ascii=False)
+    print(f"TOTAL: {len(all_nodes)} nodes, dedup: {len(dedup)}", flush=True)
 
 if __name__ == "__main__":
     main()
